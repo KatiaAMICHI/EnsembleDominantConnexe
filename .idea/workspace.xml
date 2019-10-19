@@ -274,7 +274,7 @@
       <option name="presentableId" value="Default" />
       <updated>1571146576735</updated>
       <workItem from="1571146579699" duration="13625000" />
-      <workItem from="1571178962603" duration="41057000" />
+      <workItem from="1571178962603" duration="55225000" />
     </task>
     <servers />
   </component>
@@ -282,7 +282,7 @@
     <option name="version" value="1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/EnsembleDominant$EnsembleDSageM__1_.coverage" NAME="EnsembleDSageM (1) Coverage Results" MODIFIED="1571484131791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../EnsembleDominantConnexe" />
+    <SUITE FILE_PATH="coverage/EnsembleDominant$EnsembleDSageM__1_.coverage" NAME="EnsembleDSageM (1) Coverage Results" MODIFIED="1571527670811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../EnsembleDominantConnexe" />
     <SUITE FILE_PATH="coverage/EnsembleDominant$EnsembleDSageM.coverage" NAME="EnsembleDSageM Coverage Results" MODIFIED="1571352960776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EnsembleDominant$GraphKR.coverage" NAME="GraphKR Coverage Results" MODIFIED="1571245039160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EnsembleDominant$graph.coverage" NAME="graph Coverage Results" MODIFIED="1571207108563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

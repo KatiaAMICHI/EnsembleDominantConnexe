@@ -7,7 +7,7 @@ import pprint
 # import pandas as pd
 # from sage.all import *
 
-d = 100
+d = 55
 f = open("input.points")
 vertices = f.read().splitlines()
 
@@ -20,7 +20,7 @@ verticesIdP = dict(enumerate(res, 0))
 def getEdges(verticesIdP):
     matrixAdj = defaultdict()
     for v in verticesIdP:
-        matrixAdj[v] = {"voisins": [], "label": None, "color": "blanc", "nbV": 0, "composant": False}
+        matrixAdj[v] = {"voisins": set(), "label": None, "color": "blanc", "nbV": 0, "composant": False}
     edges = set()
     edgesDist = set()
     for u in verticesIdP:
@@ -29,7 +29,8 @@ def getEdges(verticesIdP):
                 continue
             dis = getDis(verticesIdP, u, v)
             if isNeighbor(verticesIdP, u, v):
-                matrixAdj[u]["voisins"].append(v)
+                matrixAdj[u]["voisins"].add(v)
+                matrixAdj[v]["voisins"].add(u)
                 matrixAdj[u]["nbV"] += 1
 
                 if u < v:
@@ -41,16 +42,23 @@ def getEdges(verticesIdP):
 
 
 def isNeighbor(verticesIdP, u, v):
-    return getDis(verticesIdP, u, v) <= d * d
+    return getDis(verticesIdP, u, v) < (d * d)
 
 
 def getDis(verticesIdP, u, v):
-    return ((verticesIdP[u][0] - verticesIdP[v][0]) * (verticesIdP[u][0] - verticesIdP[v][0]) + \
-            (verticesIdP[u][1] - verticesIdP[v][1]) * (verticesIdP[u][1] - verticesIdP[v][1]))
+    return (((verticesIdP[u][0] - verticesIdP[v][0]) * (verticesIdP[u][0] - verticesIdP[v][0])) + \
+            ((verticesIdP[u][1] - verticesIdP[v][1]) * (verticesIdP[u][1] - verticesIdP[v][1])))
 
 
-noir = []
-gris = []
+def neighbor(p, vertices):
+    result = set()
+    for point in vertices:
+        print(" p : ", point)
+        if point == p:
+            continue
+        if isNeighbor(vertices, point, p):
+            result.add(vertices[point])
+    print("result size : ", len(result))
 
 
 def hasNNeibBlack(matrixAdj, noir, v):
@@ -75,12 +83,13 @@ def hasNNeibBlack(matrixAdj, noir, v):
     return False
 
 
-def MIS(matrixAdj, noir, gris):
+def MIS(matrixAdj):
     nbVisite = 0
     listNoeud = list(matrixAdj.keys())
 
     listToVisite = set()
     listToVisite.add(listNoeud[0])
+    noir = []
     while len(listToVisite) != 0:
         v = listToVisite.pop()
         if matrixAdj[v]["color"] == "gris":
@@ -99,33 +108,40 @@ def MIS(matrixAdj, noir, gris):
         listToVisite = set(filter(lambda x: matrixAdj[x]["color"] == "blanc", listToVisite))
 
     print("<<<<<<< noir : ", noir)
+    return noir
 
 
 def MISV2(matrixAdj, noir, gris):
-    i = 0
-    # print("noir : ", noir)
-    nbGris = 0
-    nbNoir = 0
-    listNoeud = list(matrixAdj.keys())
     noir = []
-    for v in listNoeud:
+    for v in list(matrixAdj.keys()):
         if matrixAdj[v]["color"] == "gris":
             continue
-        # print("********************** FOR ***************************")
-        # print(" matrixAdj[v][voisins]: ", matrixAdj[v]["voisins"])
-        # print("n1 : ", v)
         if hasNNeibBlack(matrixAdj, noir, v):
-            # print(">>>>>> ajou de n1 dans noir")
             noir.append(v)
             matrixAdj[v]["color"] = "noir"
             matrixAdj[v]["label"] = "N" + str(v)
             for n in matrixAdj[v]["voisins"]:
-                listV = matrixAdj[n]["voisins"]
-                # if n in matrixAdjCopy:
-                # print("     n: ", n)
-                # if not hasNNeibBlack(matrixAdj, noir, n):
                 matrixAdj[n]["color"] = "gris"
-    print("MISV2 <<<<<<< noir : ", noir)
+    print("MISV2 <<<<<<< noir : ", len(noir))
+    return noir
+
+
+def isMIS(matrixAdj, MIS):
+    vertices = list(matrixAdj.keys())
+    cpt = 0
+    for p in MIS:
+        vertices.remove(p)
+        vertices = set(vertices) - set(matrixAdj[p]["voisins"])
+        cpt += len(matrixAdj[p]["voisins"])
+    return len(vertices) == 0
+
+
+def MISinFile(noir, verticesIdP):
+    pointsOutput = []
+    for v in noir:
+        pointsOutput.append(verticesIdP[v])
+
+    open("OutputFile", 'w').write('\n'.join('%s %s' % x for x in pointsOutput))
 
 
 def inDiffComposant(matrixAdj, v, i):
@@ -146,70 +162,38 @@ def inDiffComposant(matrixAdj, v, i):
 
 
 def A(matrixAdj):
-    # pprint.pprint(matrixAdj)
     print(" ******************** A ******************** ")
+    bleu = set()
     for i in 5, 4, 3, 2:
         for v in matrixAdj.keys():
             if matrixAdj[v]["color"] == "noir" or matrixAdj[v]["color"] == "bleu":
                 continue
-            # print("v : ", v, " | ", i)
-
             listLabel, listNoeud, inComposant = inDiffComposant(matrixAdj, v, i)
             if matrixAdj[v]["color"] == "gris" and len(listLabel) >= i:
-                # print("             listLabel: ", listLabel)
-                # print("             listComposant: ", listNoeud)
                 matrixAdj[v]["color"] = "blue"
+                bleu.add(v)
                 maxLabel = max(listLabel, key=len)
                 for e in listNoeud:
                     matrixAdj[e]["composant"] = True
                     if not inComposant:
-                        # print("         je suis dans le if")
                         matrixAdj[e]["label"] = ''.join(map(str, listLabel))
                     else:
-                        # print("         je suis dans le else")
                         matrixAdj[e]["label"] = maxLabel
-                    # print("         je change en blue matrixAdj[", e, "][label] : ", matrixAdj[e]["label"])
-                    # print("   APRES  matrixAdj[", e, "][composant] ", matrixAdj[e]["composant"])
-    # pprint.pprint(matrixAdj)
+    return bleu
 
 
 a, b, matrixAdj = getEdges(verticesIdP)
 edges = list(map(list, a))
-# print("matrixAdj : ")
-# pprint.pprint(matrixAdj)
-# print("edges : ", b)
-# print("v[A] : ", matrixAdj[1]["nbV"])
-# print(matrixAdj)
-
-matrixAdj = {0: {"voisins": [1], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False},
-             1: {"voisins": [0, 2, 5, 8], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False},
-             2: {"voisins": [1, 5, 3], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False},
-             3: {"voisins": [2, 4], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False},
-             4: {"voisins": [5, 6, 16, 3], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False},
-             5: {"voisins": [1, 2, 4, 7], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False},
-             6: {"voisins": [4, 7, 14], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False},
-             7: {"voisins": [5, 8, 12, 13, 6], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False},
-             8: {"voisins": [1, 9, 10, 12, 7], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False},
-             9: {"voisins": [8], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False},
-             10: {"voisins": [8, 12], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False},
-             11: {"voisins": [12], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False},
-             12: {"voisins": [10, 8, 7, 13, 11], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False},
-             13: {"voisins": [7, 12, 14], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False},
-             14: {"voisins": [6, 15, 13], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False},
-             15: {"voisins": [14], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False},
-             16: {"voisins": [4], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False}}
 
 tmps1 = time.clock()
-MIS(matrixAdj, noir, gris)
+noir = MIS(matrixAdj)
 tmps2 = time.clock()
-print("[MIS] Temps d'execution = ", tmps2-tmps1)
+print("[MIS] Temps d'execution = ", tmps2 - tmps1)
+print(isMIS(matrixAdj.copy(), noir))
 
-tmps1 = time.clock()
-MISV2(matrixAdj, noir, gris)
-tmps2 = time.clock()
-print("[MISV2] Temps d'execution = ", tmps2-tmps1)
-
-# A(matrixAdj)
+bleu = A(matrixAdj)
+print("bleu : ", len(bleu))
+MISinFile(list(noir) + list(bleu), verticesIdP)
 # print(list(verticesIdP.keys()))
 # edgesD = list(map(list, b))
 # 26868
