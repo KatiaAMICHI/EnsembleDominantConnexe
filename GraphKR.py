@@ -2,11 +2,9 @@
 # Minimum Spanning Tree of a given connected,
 # undirected and weighted graph
 
-from collections import defaultdict
-
 
 # Class to represent a graph
-from EnsembleDSageM import getEdges, verticesIdP
+from algos.EnsembleDSageM import getEdges, verticesIdP
 
 
 class Graph:

@@ -13,7 +13,7 @@ import graphviz
 # Tree: set(Edge) aka edge list, used for steiner solution
 # Path: [Node]
 # ShortestPath: {(Node, Node): Path}
-from EnsembleDSageM import isNeighbor
+from algos.EnsembleDSageM import isNeighbor
 
 
 def render_graph(g):
@@ -314,8 +314,8 @@ def getEdges(verticesIdP):
 
 
 if __name__ == '__main__':
-    gg = getEdges(verticesIdP)
-    g = create_random_graph(40, 0.10, gg)
+    # g = create_random_graph(40, 0.10, gg)
+    g = getEdges(verticesIdP)
     print("g : ", g)
     terminals = pick_random_terminals(g)
     print("terminals size   : ", len(terminals))
