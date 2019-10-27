@@ -35,6 +35,14 @@ def getEdges(verticesIdP):
     return list(edges), list(edgesDist), matrixAdj
 
 
+def getMaxVwDegree(matrixAdj):
+    return max(matrixAdj.keys(), key=lambda x: matrixAdj[x]["nbV"])
+
+
+def getMaxVwDegreeWithL(matrixAdj, l):
+    return max(l, key=lambda x: matrixAdj[x]["nbV"])
+
+
 def isNeighbor(verticesIdP, u, v):
     return getDis(verticesIdP, u, v) < (d * d)
 
@@ -44,15 +52,26 @@ def getDis(verticesIdP, u, v):
             ((verticesIdP[u][1] - verticesIdP[v][1]) * (verticesIdP[u][1] - verticesIdP[v][1])))
 
 
-def neighbor(p, vertices):
+def neighborP(p, vertices):
+    """
+    get neighor of p with distance
+    :param p:
+    :param vertices:
+    :return:
+    """
     result = set()
+    result = set(map(lambda x: vertices[point], filter(lambda n: n != p and isNeighbor(vertices, point, p), vertices)))
+    result = set()
+    print("AVANT result size : ", len(result))
+
     for point in vertices:
         print(" p : ", point)
         if point == p:
             continue
         if isNeighbor(vertices, point, p):
             result.add(vertices[point])
-    print("result size : ", len(result))
+    print("APRES result size : ", len(result))
+    return result
 
 
 def isMIS(matrixAdj, MIS):
@@ -67,6 +86,7 @@ def isMIS(matrixAdj, MIS):
 
 def MISinFile(noir, verticesIdP):
     pointsOutput = []
+    result = list(map(lambda x: verticesIdP[x], noir))
     for v in noir:
         pointsOutput.append(verticesIdP[v])
 
