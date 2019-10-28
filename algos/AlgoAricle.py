@@ -63,7 +63,7 @@ def A(matrixAdj):
     bleu = set()
 
     for i in 5, 4, 3, 2:
-        print(" ******************** A : ", i, " ******************** ")
+        # print(" ******************** A : ", i, " ******************** ")
 
         verticesToVisite = set(filter(lambda x: matrixAdj[x]["color"] == "gris", matrixAdj.keys()))
         while len(verticesToVisite) != 0:

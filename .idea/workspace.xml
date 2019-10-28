@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c52037da-fb37-47dd-976e-91b6289938ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/algos/algoAvril.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/algos/algoPlus.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algos/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algos/mainN.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algos/v1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/input2.points" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projetAAGA/input2.points" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/result/results.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algos/AlgoAricle.py" beforeDir="false" afterPath="$PROJECT_DIR$/algos/AlgoAricle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/algos/EnsembleDSageM.py" beforeDir="false" afterPath="$PROJECT_DIR$/algos/EnsembleDSageM.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/algos/OutputFile" beforeDir="false" afterPath="$PROJECT_DIR$/algos/OutputFile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algos/algoAvril.py" beforeDir="false" afterPath="$PROJECT_DIR$/algos/algoAvril.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/algos/mainArticle.py" beforeDir="false" afterPath="$PROJECT_DIR$/algos/mainArticle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetAAGA/input.points" beforeDir="false" afterPath="$PROJECT_DIR$/projetAAGA/input.points" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projetAAGA/output0.points" beforeDir="false" afterPath="$PROJECT_DIR$/projetAAGA/output0.points" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +37,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1SF5blHQCPmjd3vH4PhOJkMjVqQ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -60,29 +68,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.testSage">
-    <configuration name="EnsembleDSageM (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="EnsembleDominantConnexe" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algos" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algos/EnsembleDSageM.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.main">
     <configuration name="algoAvril" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="EnsembleDominantConnexe" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -105,7 +91,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="algoPlus" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="EnsembleDominantConnexe" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -118,7 +104,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algos/algoPlus.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algos/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -141,6 +127,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algos/mainArticle.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mainNetwork" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="EnsembleDominantConnexe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algos" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algos/mainN.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -173,11 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.testSage" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.mainNetwork" />
         <item itemvalue="Python.mainArticle" />
+        <item itemvalue="Python.testSage" />
         <item itemvalue="Python.algoAvril" />
-        <item itemvalue="Python.algoPlus" />
-        <item itemvalue="Python.EnsembleDSageM (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -200,7 +208,7 @@
       <workItem from="1572022295483" duration="209000" />
       <workItem from="1572022524999" duration="17025000" />
       <workItem from="1572085904002" duration="2940000" />
-      <workItem from="1572109743233" duration="22641000" />
+      <workItem from="1572109743233" duration="64752000" />
     </task>
     <servers />
   </component>
@@ -235,14 +243,16 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/EnsembleDominantConnexe$main.coverage" NAME="main Coverage Results" MODIFIED="1572296256825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algos" />
     <SUITE FILE_PATH="coverage/EnsembleDominantConnexe$AlgoAricle.coverage" NAME="AlgoAricle Coverage Results" MODIFIED="1572040527033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algos" />
     <SUITE FILE_PATH="coverage/EnsembleDominantConnexe$algoAvril.coverage" NAME="algoAvril Coverage Results" MODIFIED="1572134205240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algos" />
     <SUITE FILE_PATH="coverage/EnsembleDominant$EnsembleDSageM__1_.coverage" NAME="EnsembleDSageM (1) Coverage Results" MODIFIED="1571530286767" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EnsembleDominantConnexe$EnsembleDSageM__2_.coverage" NAME="EnsembleDSageM (2) Coverage Results" MODIFIED="1572050815783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algos" />
     <SUITE FILE_PATH="coverage/EnsembleDominantConnexe$algoPlus.coverage" NAME="algoPlus Coverage Results" MODIFIED="1572079274569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algos" />
+    <SUITE FILE_PATH="coverage/EnsembleDominantConnexe$mainNetwork.coverage" NAME="mainNetwork Coverage Results" MODIFIED="1572292817462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algos" />
     <SUITE FILE_PATH="coverage/EnsembleDominant$EnsembleDSageM.coverage" NAME="EnsembleDSageM Coverage Results" MODIFIED="1571352960776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EnsembleDominant$GraphKR.coverage" NAME="GraphKR Coverage Results" MODIFIED="1571245039160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/EnsembleDominantConnexe$mainArticle.coverage" NAME="mainArticle Coverage Results" MODIFIED="1572148378554" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algos" />
+    <SUITE FILE_PATH="coverage/EnsembleDominantConnexe$mainArticle.coverage" NAME="mainArticle Coverage Results" MODIFIED="1572258892569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algos" />
     <SUITE FILE_PATH="coverage/EnsembleDominant$graph.coverage" NAME="graph Coverage Results" MODIFIED="1571207108563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

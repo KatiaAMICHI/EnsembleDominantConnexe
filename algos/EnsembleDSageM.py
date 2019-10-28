@@ -11,6 +11,21 @@ import pprint
 d = 55
 
 
+def getVertices(filename):
+    """
+    retourne une map <identifiant sommet, position(x,y) sommet>
+    :param filename:
+    :return:
+    """
+    f = open(filename)
+    vertices = f.read().splitlines()
+    res = list(map(lambda x: (int(x.split(' ')[0]), int(x.split(' ')[1])), vertices))
+    # un id pour chaque noeud { id : Point(x,y) ....}
+    verticesIdP = dict(enumerate(res, 0))
+
+    return verticesIdP
+
+
 def getEdges(verticesIdP):
     matrixAdj = defaultdict()
     for v in verticesIdP:
