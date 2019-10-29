@@ -12,7 +12,11 @@ def min_connected_dominating_sets_non_distributed(G):
     """Compute a CDS, based on algorithm of Butenko, Cheng, Oliveira, Pardalos
         Based on the paper: BUTENKO, Sergiy, CHENG, Xiuzhen, OLIVEIRA, Carlos A., et al. A new heuristic for the minimum connected dominating set problem on ad hoc wireless networks. In : Recent developments in cooperative control and optimization. Springer US, 2004. p. 61-73.
     """
-    assert nx.is_connected(G)
+    print("nx.is_connected(G) : ", nx.is_connected(G))
+    if not nx.is_connected(G):
+        return -1
+
+    # assert nx.is_connected(G)
 
     G2 = copy.deepcopy(G)
 

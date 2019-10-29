@@ -3,10 +3,12 @@ from operator import or_
 from functools import reduce
 from operator import itemgetter
 import pprint
-
+import re
+import os
 # import pandas as pd
 # from sage.all import *
-
+import numpy as np
+import csv
 
 d = 55
 
@@ -26,7 +28,52 @@ def getVertices(filename):
     return verticesIdP
 
 
-def getEdges(verticesIdP):
+def getVerticesFile(file):
+    # cmd = "tr '\t' '\n' < " + file + " | sort | uniq"
+    cmd = "tr ' ' '\n' < " + file + " | sort | uniq"
+    vertices = os.popen(cmd).read().split('\n')
+    del vertices[-1]
+    vertices = list(map(int, vertices))
+
+    return vertices
+
+
+def getEdgesFile(file):
+    with open(file, 'r') as f:
+        reader = f.read().splitlines()
+        # edges = list(map(lambda x: (int(x.split('\t')[0]), int(x.split('\t')[1])), reader))
+        edges = list(map(lambda x: (int(x.split(' ')[0]), int(x.split(' ')[1])), reader))
+    return edges
+
+
+def getVerticesG(file, geo=False):
+    if geo:
+        return getVertices(file)
+    return getVerticesFile(file)
+
+
+def getMatrixAdjFile(file):
+    vertices = getVerticesFile(file)
+    edges = getEdgesFile(file)
+
+    matrixAdj = defaultdict()
+
+    for v in vertices:
+        matrixAdj[v] = {"voisins": set(), "label": None, "color": "blanc", "nbV": 0, "inComposant": False}
+
+    for e in edges:
+        u, v = e
+        matrixAdj[u]["voisins"].add(v)
+        matrixAdj[v]["voisins"].add(u)
+        matrixAdj[u]["nbV"] += 1
+        matrixAdj[v]["nbV"] += 1
+
+    return matrixAdj
+
+
+def getEdges(file):
+    verticesIdP = getVertices(file)
+
     matrixAdj = defaultdict()
     for v in verticesIdP:
         matrixAdj[v] = {"voisins": set(), "label": None, "color": "blanc", "nbV": 0, "inComposant": False}
@@ -41,6 +88,7 @@ def getEdges(verticesIdP):
                 matrixAdj[u]["voisins"].add(v)
                 matrixAdj[v]["voisins"].add(u)
                 matrixAdj[u]["nbV"] += 1
+                matrixAdj[v]["nbV"] += 1
 
                 if u < v:
                     edgesDist.add((u, v, dis))
@@ -77,15 +125,12 @@ def neighborP(p, vertices):
     result = set()
     result = set(map(lambda x: vertices[point], filter(lambda n: n != p and isNeighbor(vertices, point, p), vertices)))
     result = set()
-    print("AVANT result size : ", len(result))
 
     for point in vertices:
-        print(" p : ", point)
         if point == p:
             continue
         if isNeighbor(vertices, point, p):
             result.add(vertices[point])
-    print("APRES result size : ", len(result))
     return result
 
 
