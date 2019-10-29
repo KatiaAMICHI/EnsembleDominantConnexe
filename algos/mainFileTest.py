@@ -18,7 +18,10 @@ import networkx as nx
 def main():
     Dataset = "Enron"
     path = "../res/extract" + Dataset + "/"
+    filename = 'extractEnron53200000.points'
     filename = 'extractEnron20900000.points'
+
+    filename = 'extractEnron72200000.points'
 
     geo = False
     if geo:
@@ -28,6 +31,7 @@ def main():
         edges = getEdgesFile(path + filename)
     vertices = getVerticesG(path + filename, geo=geo)
 
-    print("edges : ", edges)
+    edges = list(map(list, edges))
+    print(edges)
 
 main()

@@ -16,6 +16,7 @@ from algos.algoAvril import *
 def main():
     nb_file = 0
     Dataset = "Enron"
+    Dataset = "Rollernet"
 
     resultDataset = r'../result/' + Dataset + '/results' + Dataset + '.csv'
     csv_Times = open(resultDataset, mode='w')
