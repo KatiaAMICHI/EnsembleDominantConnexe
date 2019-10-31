@@ -51,7 +51,7 @@ def main():
         G = nx.Graph()
         G.add_edges_from(edges)
         tmps1 = time.process_time()
-        cdsA = min_connected_dominating_sets_non_distributed(G)
+        cdsA = MCDS(G)
         tmps2 = time.process_time()
         if cdsA == -1:
             continue

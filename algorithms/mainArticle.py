@@ -1,20 +1,22 @@
 from algos.AlgoAricle import *
-from algos.EnsembleDSageM import getEdges, MISinFile
+from algos.EnsembleDSageM import *
 import time
 
 from algos.algoAvril import *
 from algos.algoPlus import MISC
 
-f = open("../input.points")
-f = open("../input2.points")
-vertices = f.read().splitlines()
+path = "../"
+f1 = "input.points"
 
-res = list(map(lambda x: (int(x.split(' ')[0]), int(x.split(' ')[1])), vertices))
+# VerticesIdP  un id pour chaque noeud { id : Point(x,y) ....}
 
-# un id pour chaque noeud { id : Point(x,y) ....}
-verticesIdP = dict(enumerate(res, 0))
-
-a, b, matrixAdj = getEdges(verticesIdP)
+geo = True
+if geo:
+    a, edgesDist, matrixAdj = getEdges(path + f1)
+else:
+    matrixAdj = getMatrixAdjFile(path + f1)
+    a = getEdgesFile(path + f1)
+vertices = getVerticesG(path + f1, geo=geo)
 
 # trouver l'element max dans notre dict par rapport au nb voisins
 # itemMaxValue = max(matrixAdjT.items(), key=lambda x: len(x[1]["voisins"]))
@@ -99,50 +101,54 @@ matrixAdjs = {1: {"voisins": [2, 3, 4], 'label': None, 'color': 'blanc', 'nbV': 
               16: {"voisins": [12], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False, "inComposant": [16]}}
 
 matrixAdjp = {1: {"voisins": [2, 3, 4], 'label': None, 'color': 'blanc', 'nbV': 3, "composant": False,
-                 "inComposant": [1]},
-             2: {"voisins": [1, 5, 6], 'label': None, 'color': 'blanc', 'nbV': 3, "composant": False,
-                 "inComposant": [2]},
-             3: {"voisins": [1, 6, 7, 8], 'label': None, 'color': 'blanc', 'nbV': 4, "composant": False,
-                 "inComposant": [3]},
-             4: {"voisins": [1, 8, 9], 'label': None, 'color': 'blanc', 'nbV': 3, "composant": False,
-                 "inComposant": [4]},
-             5: {"voisins": [2, 10], 'label': None, 'color': 'blanc', 'nbV': 2, "composant": False,
-                 "inComposant": [5]},
-             6: {"voisins": [2, 3, 10, 11], 'label': None, 'color': 'blanc', 'nbV': 4, "composant": False,
-                 "inComposant": [6]},
-             7: {"voisins": [3, 10, 11, 12], 'label': None, 'color': 'blanc', 'nbV': 4, "composant": False,
-                 "inComposant": [7]},
-             8: {"voisins": [3, 4, 11, 12], 'label': None, 'color': 'blanc', 'nbV': 4, "composant": False,
-                 "inComposant": [8]},
-             9: {"voisins": [4, 12], 'label': None, 'color': 'blanc', 'nbV': 2, "composant": False, "inComposant": [9]},
-             10: {"voisins": [5, 6, 7, 13, 11], 'label': None, 'color': 'blanc', 'nbV': 5, "composant": False,
-                  "inComposant": [10]},
-             11: {"voisins": [6, 7, 8, 14, 15, 10, 12], 'label': None, 'color': 'blanc', 'nbV': 7, "composant": False,
-                  "inComposant": [11]},
-             12: {"voisins": [7, 8, 9, 16, 11], 'label': None, 'color': 'blanc', 'nbV': 5, "composant": False,
-                  "inComposant": [12]},
-             13: {"voisins": [10], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False,
-                  "inComposant": [13]},
-             14: {"voisins": [11], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False,
-                  "inComposant": [14]},
-             15: {"voisins": [11], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False, "inComposant": [15]},
-             16: {"voisins": [12], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False, "inComposant": [16]}}
+                  "inComposant": [1]},
+              2: {"voisins": [1, 5, 6], 'label': None, 'color': 'blanc', 'nbV': 3, "composant": False,
+                  "inComposant": [2]},
+              3: {"voisins": [1, 6, 7, 8], 'label': None, 'color': 'blanc', 'nbV': 4, "composant": False,
+                  "inComposant": [3]},
+              4: {"voisins": [1, 8, 9], 'label': None, 'color': 'blanc', 'nbV': 3, "composant": False,
+                  "inComposant": [4]},
+              5: {"voisins": [2, 10], 'label': None, 'color': 'blanc', 'nbV': 2, "composant": False,
+                  "inComposant": [5]},
+              6: {"voisins": [2, 3, 10, 11], 'label': None, 'color': 'blanc', 'nbV': 4, "composant": False,
+                  "inComposant": [6]},
+              7: {"voisins": [3, 10, 11, 12], 'label': None, 'color': 'blanc', 'nbV': 4, "composant": False,
+                  "inComposant": [7]},
+              8: {"voisins": [3, 4, 11, 12], 'label': None, 'color': 'blanc', 'nbV': 4, "composant": False,
+                  "inComposant": [8]},
+              9: {"voisins": [4, 12], 'label': None, 'color': 'blanc', 'nbV': 2, "composant": False,
+                  "inComposant": [9]},
+              10: {"voisins": [5, 6, 7, 13, 11], 'label': None, 'color': 'blanc', 'nbV': 5, "composant": False,
+                   "inComposant": [10]},
+              11: {"voisins": [6, 7, 8, 14, 15, 10, 12], 'label': None, 'color': 'blanc', 'nbV': 7, "composant": False,
+                   "inComposant": [11]},
+              12: {"voisins": [7, 8, 9, 16, 11], 'label': None, 'color': 'blanc', 'nbV': 5, "composant": False,
+                   "inComposant": [12]},
+              13: {"voisins": [10], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False,
+                   "inComposant": [13]},
+              14: {"voisins": [11], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False,
+                   "inComposant": [14]},
+              15: {"voisins": [11], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False, "inComposant": [15]},
+              16: {"voisins": [12], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False, "inComposant": [16]}}
+
+verticesIdP = getVertices(path + f1)
 
 # ALGO article
-tmps1 = time.clock()
-noir = MIS(matrixAdj)
-bleu = A(matrixAdj)
-tmps2 = time.clock()
-print("[MIS] + [A] Temps d'execution = ", tmps2 - tmps1)
-print(" noir : ", len(noir))
-print(" bleu : ", len(bleu))
-MISinFile(list(noir) + list(bleu), verticesIdP)
+# tmps1 = time.clock()
+# noir = MIS(matrixAdj)
+# bleu = A(matrixAdj)
+# tmps2 = time.clock()
+# print("[MIS] + [A] Temps d'execution = ", tmps2 - tmps1)
+# print(" noir : ", len(noir))
+# print(" bleu : ", len(bleu))
+# MISinFile(list(noir) + list(bleu), verticesIdP)
 #############################################################
 # ALGO plus
 # MISC(matrixAdj)
 
 # ALGO avril
 verticesToVisite = list(matrixAdj.keys())
-noir, matrixAdj = IC_MIS(matrixAdj, verticesToVisite)
+noir, matrixAdj = IC_MIS(matrixAdj)
+print("noir : ", len(noir))
 # bleu = Kruskal(matrixAdj, list(noir))
 MISinFile(list(noir), verticesIdP)

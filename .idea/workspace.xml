@@ -2,49 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c52037da-fb37-47dd-976e-91b6289938ce" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/algorithms/OutputFile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithms/drawGraph.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithms/mainN.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatGraph/generateGeoGraph.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/EnsembleDominantConnexe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EnsembleDominantConnexe.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algos/mainFileTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/algos/mainFileTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron11400000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron11400000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron13300000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron13300000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron17100000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron17100000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron19000000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron19000000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron20900000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron20900000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron22800000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron22800000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron24700000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron24700000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron26600000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron26600000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron28500000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron28500000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron30400000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron30400000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron32300000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron32300000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron36100000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron36100000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron3800000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron3800000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron38000000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron38000000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron39900000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron39900000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron41800000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron41800000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron43700000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron43700000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron45600000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron45600000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron47500000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron47500000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron49400000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron49400000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron51300000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron51300000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron53200000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron53200000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron5700000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron5700000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron57000000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron57000000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron58900000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron58900000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron60800000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron60800000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron62700000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron62700000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron64600000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron64600000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron66500000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron66500000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron70300000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron70300000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron76000000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron76000000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron77900000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron77900000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron81700000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron81700000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron83600000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron83600000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron85500000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron85500000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron87400000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron87400000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/extractEnron/extractEnron89300000.points" beforeDir="false" afterPath="$PROJECT_DIR$/res/extractEnron/extractEnron89300000.points" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/Enron/resultsEnron.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/Enron/resultsEnron.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/Enron/resultsFilesEnron.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/Enron/resultsFilesEnron.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algos/AlgoAricle.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/AlgoAricle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algos/EnsembleDSageM.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/EnsembleDSageM.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algos/OutputFile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algos/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algos/algoAvril.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algoAvril.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algos/algoPlus.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/algoPlus.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algos/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algos/mainArticle.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/mainArticle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algos/mainFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/mainFile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algos/mainFileTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/mainFileTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algos/mainN.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algos/v1.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/v1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generatData/geShell.sh" beforeDir="false" afterPath="$PROJECT_DIR$/generatGraph/geShell.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generatData/geShellSousGraph.sh" beforeDir="false" afterPath="$PROJECT_DIR$/generatGraph/geShellSousGraph.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +33,125 @@
   <component name="FavoritesManager">
     <favorites_list name="EnsembleDominantConnexe" />
   </component>
+  <component name="FileEditorManager">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/algorithms/main.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="397">
+                  <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
+                  <folding>
+                    <element signature="e#48#82#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/algorithms/mainN.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="342">
+                  <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/algorithms/v1.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="216">
+                  <caret line="12" column="29" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="29" />
+                  <folding>
+                    <element signature="e#47#68#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/algorithms/mainArticle.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-2159">
+                  <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+                  <folding>
+                    <element signature="e#0#30#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/algorithms/drawGraph.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="288">
+                  <caret line="71" column="64" selection-start-line="71" selection-start-column="64" selection-end-line="71" selection-end-column="64" />
+                  <folding>
+                    <element signature="e#0#31#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/generatGraph/generateGeoGraph.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="591">
+                  <caret line="52" column="42" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
+                  <folding>
+                    <element signature="e#0#31#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/PycharmProjects/testPythonDaar/venv/lib/python3.7/site-packages/networkx/algorithms/components/connected.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-424">
+                  <caret line="121" column="4" selection-start-line="121" selection-start-column="4" selection-end-line="121" selection-end-column="4" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/algorithms/AlgoAricle.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <folding>
+                    <element signature="e#0#35#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/algorithms/EnsembleDSageM.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="90">
+                  <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$USER_HOME$/PycharmProjects/testPythonDaar/venv/lib/python3.7/site-packages/networkx/generators/geometric.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="251">
+                  <caret line="157" selection-start-line="157" selection-end-line="158" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -62,13 +159,70 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>verticesIdP</find>
+      <find>inserted_set</find>
+      <find>cds</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/algos/EnsembleDSageM.py" />
+        <option value="$PROJECT_DIR$/algos/algoAvril.py" />
+        <option value="$PROJECT_DIR$/algos/mainArticle.py" />
+        <option value="$PROJECT_DIR$/algos/mainN.py" />
+        <option value="$PROJECT_DIR$/algos/main.py" />
+        <option value="$PROJECT_DIR$/algos/v1.py" />
+        <option value="$PROJECT_DIR$/algos/drawGraph.py" />
+        <option value="$USER_HOME$/PycharmProjects/testPythonDaar/venv/lib/python3.7/site-packages/networkx/generators/geometric.py" />
+        <option value="$PROJECT_DIR$/generatGraph/generateGeoGraph.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="532" />
+    <option name="y" value="19" />
+    <option name="width" value="1387" />
+    <option name="height" value="1060" />
   </component>
   <component name="ProjectId" id="1SF5blHQCPmjd3vH4PhOJkMjVqQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="EnsembleDominantConnexe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EnsembleDominantConnexe" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EnsembleDominantConnexe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EnsembleDominantConnexe" type="462c0819:PsiDirectoryNode" />
+              <item name="algorithms" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EnsembleDominantConnexe" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EnsembleDominantConnexe" type="462c0819:PsiDirectoryNode" />
+              <item name="generatGraph" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -83,6 +237,9 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pngRapport" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/generatData" />
       <recent name="$PROJECT_DIR$/algos" />
@@ -100,8 +257,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.mainFileTest">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.generateGeoGraph">
+    <configuration name="drawGraph" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="EnsembleDominantConnexe" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -113,8 +270,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algos/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algos/drawGraph.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="generateGeoGraph" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="EnsembleDominantConnexe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/generatGraph" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/generatGraph/generateGeoGraph.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -145,28 +322,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mainFileTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="EnsembleDominantConnexe" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algos" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algos/mainFileTest.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="mainNetwork" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="EnsembleDominantConnexe" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -189,7 +344,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="testSage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="v1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="EnsembleDominantConnexe" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -201,8 +356,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algos/testSage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algos/v1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -213,11 +367,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.mainFileTest" />
-        <item itemvalue="Python.main" />
+        <item itemvalue="Python.generateGeoGraph" />
+        <item itemvalue="Python.drawGraph" />
         <item itemvalue="Python.mainNetwork" />
+        <item itemvalue="Python.v1" />
         <item itemvalue="Python.mainArticle" />
-        <item itemvalue="Python.testSage" />
       </list>
     </recent_temporary>
   </component>
@@ -244,6 +398,29 @@
     </task>
     <servers />
   </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="19" width="1920" height="1060" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" weight="0.3294204" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.19092827" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Terminal" sideWeight="0.4994726" weight="0.33369923" />
+      <window_info anchor="bottom" id="Event Log" sideWeight="0.50052744" side_tool="true" weight="0.33369923" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32930845" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23051591" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -253,6 +430,12 @@
         <entry key="MAIN">
           <value>
             <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
@@ -287,5 +470,199 @@
     <SUITE FILE_PATH="coverage/EnsembleDominant$GraphKR.coverage" NAME="GraphKR Coverage Results" MODIFIED="1571245039160" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/EnsembleDominantConnexe$mainArticle.coverage" NAME="mainArticle Coverage Results" MODIFIED="1572258892569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/algos" />
     <SUITE FILE_PATH="coverage/EnsembleDominant$graph.coverage" NAME="graph Coverage Results" MODIFIED="1571207108563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/res/extractEnron/extractEnron20900000.points">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/extractEnron/extractEnron81700000.points">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3410">
+          <caret selection-end-line="218" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/extractEnron/extractEnron30400000.points">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="3" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/extractEnron/extractEnron11400000.points">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/extractEnron/extractEnron22800000.points">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/extractEnron/extractEnron28500000.points">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="3" selection-end-line="22" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/extractEnron/extractEnron85500000.points">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="5" selection-end-line="309" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/extractEnron/extractEnron57000000.points">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-466">
+          <caret line="22" column="5" selection-end-line="153" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/algoPlus.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2843">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/algoAvril.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/AlgoAricle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/EnsembleDSageM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/mainArticle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2159">
+          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/testPythonDaar/venv/lib/python3.7/site-packages/networkx/drawing/nx_pylab.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pngRapport/mis4.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pngRapport/mis3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pngRapport/mis2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pngRapport/mis1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
+          <folding>
+            <element signature="e#48#82#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/mainN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/drawGraph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="71" column="64" selection-start-line="71" selection-start-column="64" selection-end-line="71" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pngRapport/MCDS.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algos/labels_and_colors.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/v1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="29" />
+          <folding>
+            <element signature="e#47#68#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/-1421958038/numpy/random/generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="2184" column="8" lean-forward="true" selection-start-line="2184" selection-start-column="8" selection-end-line="2184" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/testPythonDaar/venv/lib/python3.7/site-packages/networkx/generators/geometric.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="157" selection-start-line="157" selection-end-line="158" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/testPythonDaar/venv/lib/python3.7/site-packages/networkx/algorithms/components/connected.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-424">
+          <caret line="121" column="4" selection-start-line="121" selection-start-column="4" selection-end-line="121" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generatGraph/generateGeoGraph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="52" column="42" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

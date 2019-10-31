@@ -8,7 +8,7 @@ def pro(matrixAdj, v):
                           , matrixAdj[v]["voisins"])))
 
 
-def IC_MIS(matrixAdj, verticesToVisite):
+def IC_MIS(matrixAdj):
     """
 
     :param matrixAdj: la matrix adjacent du file input
@@ -21,7 +21,7 @@ def IC_MIS(matrixAdj, verticesToVisite):
 
     nbVerticesBlanc = set(filter(lambda x: matrixAdj[x]["color"] == "blanc", matrixAdj.keys()))
     i = 0
-    while len(nbVerticesBlanc) != 0 and i < 4:
+    while len(nbVerticesBlanc) != 0:
         i += 1
         nbVerticesBlanc = set(filter(lambda x: matrixAdj[x]["color"] == "blanc", matrixAdj.keys()))
         if len(nbVerticesBlanc) == 0:
@@ -73,10 +73,10 @@ def IC_MIS(matrixAdj, verticesToVisite):
             # .............................. choix les dominant du rouge ou le rouge ...............................
             matrixAdj, D, listNeighbor_vn = addDominant(matrixAdj, D, I, vRed, False)
 
-        print("D : ", len(D))
+        print("     D : ", len(D))
         print("     F bleu : ", set(filter(lambda x: matrixAdj[x]["color"] == "bleu", matrixAdj.keys())))
 
-        print("D : ", D)
+        print("D : ", len(D))
     # return D
     return D, matrixAdj
 
@@ -163,7 +163,6 @@ def addDominant(matrixAdj, D, I, vRed, blanc):
             # faut élire un nouveu rouge
             # faut retourner en haut et continué
             # faut retourner la ouvelle liste de bleu
-
 
             listNeighbor_vn = set()
             print("     ***** propagation ******* ")

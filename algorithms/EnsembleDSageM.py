@@ -19,7 +19,7 @@ def getVertices(filename):
     :param filename:
     :return:
     """
-    f = open(filename)
+    f = open(filename, 'r')
     vertices = f.read().splitlines()
     res = list(map(lambda x: (int(x.split(' ')[0]), int(x.split(' ')[1])), vertices))
     # un id pour chaque noeud { id : Point(x,y) ....}
