@@ -34,6 +34,7 @@ def main():
         filename = 'input2.points'
         filename = 'input.points'
         filename = 'input3.points'
+        filename = 'input4.points'
         filename = 'generatGraph/tests0.txt'
 
         i += 1
@@ -48,6 +49,20 @@ def main():
         print(" vertices : ", len(vertices))
         print(" edges : ", len(edges))
 
+        print(" --------------- FIN algo Article  avec ", filename, " --------------- ")
+        print()
+        print()
+        print(" +++++++++++++++ algo CDSA  avec ", filename, " +++++++++++++++ ")
+        G = nx.Graph()
+        G.add_edges_from(edges)
+        print("nx.is_connected(G) : ", nx.is_connected(G))
+        tmps1 = time.process_time()
+        cdsA = MCDS(G)
+        tmps2 = time.process_time()
+        talgoA = tmps2 - tmps1
+        print("cds len : ", len(cdsA))
+        print(" --------------- FIN CDSA  avec ", filename, " ---------------")
+
         print(" +++++++++++++++ algo Article ", filename, " +++++++++++++++ ")
         tmps1 = time.process_time()
         noir = MIS(matrixAdj)
@@ -57,19 +72,6 @@ def main():
         cdsLi = list(noir) + list(bleu)
         print("cdsLi len : ", len(cdsLi))
         MISinFile(list(noir) + list(bleu), vertices)
-
-        print(" --------------- FIN algo Article  avec ", filename, " --------------- ")
-        print()
-        print()
-        print(" +++++++++++++++ algo CDSA  avec ", filename, " +++++++++++++++ ")
-        G = nx.Graph()
-        G.add_edges_from(edges)
-        tmps1 = time.process_time()
-        cdsA = MCDS(G)
-        tmps2 = time.process_time()
-        talgoA = tmps2 - tmps1
-        print("cds len : ", len(cdsA))
-        print(" --------------- FIN CDSA  avec ", filename, " ---------------")
 
         writerTimes.writerow({'File': filename.replace(".points", ""),
                               "V": round(len(vertices) / nb_file, 4),

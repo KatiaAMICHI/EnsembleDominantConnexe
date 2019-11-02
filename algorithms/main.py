@@ -17,6 +17,7 @@ def main():
     nb_file = 0
     Dataset = "Enron"
     Dataset = "Rollernet"
+    Dataset = "GenJava"
 
     resultDataset = r'../result/' + Dataset + '/results' + Dataset + '.csv'
     csv_Times = open(resultDataset, mode='w')
@@ -35,12 +36,14 @@ def main():
 
     # path = "../res/" + Dataset + "/decoData/"
     path = "../res/extract" + Dataset + "/"
+    path = "../res/" + Dataset + "/"
+
+    geo = True
 
     for f1 in os.listdir(path):
         if f1.endswith('.linkstream'):
             continue
 
-        geo = False
         if geo:
             edges, edgesDist, matrixAdj = getEdges(path + f1)
         else:

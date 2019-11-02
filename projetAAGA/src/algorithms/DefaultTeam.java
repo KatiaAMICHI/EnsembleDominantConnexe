@@ -11,6 +11,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+
+
 public class DefaultTeam {
 	public ArrayList<Point> calculConnectedDominatingSet(ArrayList<Point> points, int edgeThreshold) {
 		// REMOVE >>>>>
@@ -29,7 +31,8 @@ public class DefaultTeam {
 		
 		System.out.println(neighbor(p, points, edgeThreshold).size() );
 
-		
+		GraphGenerator g = new GraphGenerator();
+		g.generate();
 		
 		return result;
 	}
@@ -57,7 +60,7 @@ public class DefaultTeam {
 	}
 
 	// FILE PRINTER
-	private void saveToFile(String filename, ArrayList<Point> result) {
+	public static void saveToFile(String filename, ArrayList<Point> result) {
 		int index = 0;
 		try {
 			while (true) {
@@ -76,7 +79,7 @@ public class DefaultTeam {
 		}
 	}
 
-	private void printToFile(String filename, ArrayList<Point> points) {
+	public static void printToFile(String filename, ArrayList<Point> points) {
 		try {
 			PrintStream output = new PrintStream(new FileOutputStream(filename));
 			int x, y;
@@ -89,7 +92,7 @@ public class DefaultTeam {
 	}
 
 	// FILE LOADER
-	private ArrayList<Point> readFromFile(String filename) {
+	public static ArrayList<Point> readFromFile(String filename) {
 		String line;
 		String[] coordinates;
 		ArrayList<Point> points = new ArrayList<Point>();
@@ -114,4 +117,7 @@ public class DefaultTeam {
 		}
 		return points;
 	}
+	
+	
+	
 }

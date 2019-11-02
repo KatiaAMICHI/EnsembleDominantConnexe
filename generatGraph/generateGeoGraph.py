@@ -1,10 +1,12 @@
+import copy
+
+import networkx as nx
 import matplotlib.pyplot as plt
 import networkx as nx
-import copy
 
 Dataset = "NetworkxSet"
 path = "../" + Dataset + "/"
-NBFILES = 1
+NBFILES = 4
 
 
 def dataToFile(file, result):
@@ -13,55 +15,55 @@ def dataToFile(file, result):
             f.write(str(line[0]) + " " + str(line[1]) + "\n")
 
 
-def genNetworkx():
-    nbNode = 200
-    distance = 0.2125
-    G = nx.random_geometric_graph(nbNode, distance)
-    print("nx.is_connected(G) : ", nx.is_connected(G))
-    print("G edges : ", G.number_of_edges())
+def random_geometric_graph_networkxV1():
+    d = 55
 
-    # position is stored as node attribute data for random_geometric_graph
-    pos = nx.get_node_attributes(G, 'pos')
-    print("pos : ", pos.values())
-    dataToFile('resultTest.txt', pos.values())
-    # find node near center (0.5,0.5)
-    dmin = 1
-    ncenter = 0
-    for n in pos:
-        x, y = pos[n]
-        d = (x - 0.5) ** 2 + (y - 0.5) ** 2
-        if d < dmin:
-            ncenter = n
-            dmin = d
+    for nb in range(NBFILES):
+        nbNode = 400
 
-    # color by path length from node near center
-    p = dict(nx.single_source_shortest_path_length(G, ncenter))
+        if nb in range(0, 1):
+            # ok
+            d = 125
+            nbNode = 500
 
-    plt.figure(figsize=(8, 8))
-    nx.draw_networkx_edges(G, pos, nodelist=[ncenter], alpha=0.4)
-    nx.draw_networkx_nodes(G, pos, nodelist=list(p.keys()),
-                           node_size=80,
-                           node_color=list(p.values()),
-                           cmap=plt.cm.Reds_r)
+        if nb in range(1, 2):
+            d = 80
+            nbNode = 500
 
-    plt.xlim(-0.05, 1.05)
-    plt.ylim(-0.05, 1.05)
-    plt.axis('off')
-    plt.show()
+        if nb in range(2, 3):
+            # ok
+            d = 100
+            nbNode = 700
+
+        if nb in range(3, 4):
+            d = 55
+            nbNode = 1000
+
+        G = nx.random_geometric_graph(nbNode, d * 10)
+
+        print("nx.is_connected(G) : ", nx.is_connected(G))
+        while not nx.is_connected(G):
+            G = nx.random_geometric_graph(500, d * 10)
+
+        pos = nx.get_node_attributes(G, 'pos')
+        print("pos : ", pos.values())
+
+        dataToFile("tests0.txt", pos.values())
 
 
 def random_geometric_graph_networkx():
-    import matplotlib.pyplot as plt
-    import networkx as nx
-    d = 55
-    G = nx.random_geometric_graph(500, d*10)
+    d = 100
+    nbPoint = 700
+
+    G = nx.random_geometric_graph(nbPoint, d)
 
     print("nx.is_connected(G) : ", nx.is_connected(G))
     while not nx.is_connected(G):
-        G = nx.random_geometric_graph(500, d*10)
+        G = nx.random_geometric_graph(nbPoint, d)
 
     pos = nx.get_node_attributes(G, 'pos')
     print("pos : ", pos.values())
+    print(">>> nx.is_connected(G) : ", nx.is_connected(G))
 
     dataToFile("tests0.txt", pos.values())
     # position is stored as node attribute data for random_geometric_graph
@@ -94,7 +96,7 @@ def random_geometric_graph_networkx():
     plt.show()
 
 
-def randomGeoGraphInt():
+def randomGeoGraphAG():
     nbNode = 500
     distance = 0.55
 

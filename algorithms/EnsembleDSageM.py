@@ -11,8 +11,10 @@ import numpy as np
 import csv
 
 # d = 55
-d = 0.135
+d = 55 * 10
 d = 55
+d = 125
+d = 100
 
 
 def getVertices(filename, isFloat=False):

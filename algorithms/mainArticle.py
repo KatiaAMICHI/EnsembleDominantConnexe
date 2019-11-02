@@ -6,7 +6,7 @@ from algorithms.algoAvril import *
 from algorithms.algoPlus import MISC
 
 path = "../"
-f1 = "input.points"
+f1 = "input4.points"
 
 # VerticesIdP  un id pour chaque noeud { id : Point(x,y) ....}
 
