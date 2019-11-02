@@ -1,3 +1,4 @@
+import operator
 from collections import defaultdict
 from operator import or_
 from functools import reduce
@@ -23,6 +24,18 @@ def hasNNeibBlack(matrixAdj, noir, v):
     return False
 
 
+def getDegreeWh(matrixAdj, v):
+    return len(list(filter(lambda x: matrixAdj[x]["color"] == "blanc", matrixAdj[v]['voisins'])))
+
+
+def getNodeMaxDegree(matrixAdj, listToVisite):
+    listToVisite = list(
+        map(lambda x: x, sorted(listToVisite, key=lambda p: getDegreeWh(matrixAdj, p), reverse=True)))
+    maxDegree = listToVisite[0]
+    del listToVisite[0]
+    return set(listToVisite), maxDegree
+
+
 def MIS(matrixAdj):
     nbVisite = 0
     listNoeud = list(matrixAdj.keys())
@@ -31,7 +44,14 @@ def MIS(matrixAdj):
     listToVisite.add(listNoeud[0])
     noir = []
     while len(listToVisite) != 0:
-        v = listToVisite.pop()
+        # faire le max par rapport au degré
+        # print("AV listToVisite : ", listToVisite)
+        listToVisite, v = getNodeMaxDegree(matrixAdj, listToVisite)
+        # print("AP listToVisite : ", listToVisite)
+
+        # v = listToVisite.pop()
+        # print("     v : ", v)
+
         if matrixAdj[v]["color"] == "gris":
             continue
         if hasNNeibBlack(matrixAdj, noir, v):

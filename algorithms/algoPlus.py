@@ -1,4 +1,4 @@
-from algos.EnsembleDSageM import *
+from algorithms.EnsembleDSageM import *
 from functools import reduce
 
 

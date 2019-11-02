@@ -1,16 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-#
 
-from algos.EnsembleDSageM import *
-from algos.v1 import *
+from algorithms.EnsembleDSageM import *
+from algorithms.v1 import *
 import sys
 import os
 import csv
-from algos.AlgoAricle import *
-from algos.EnsembleDSageM import getEdges, MISinFile
+from algorithms.AlgoAricle import *
+from algorithms.EnsembleDSageM import getEdges, MISinFile
 import time
 
-from algos.algoAvril import *
+from algorithms.algoAvril import *
 
 
 def main():
@@ -21,6 +21,11 @@ def main():
     writerTimes = csv.DictWriter(csv_Times, fieldnames=fieldnamesTimes)
     writerTimes.writeheader()
 
+    DataSet = "Networkxa"
+    isFloat = False
+
+    if DataSet == "Networkx":
+        isFloat = True
     i = 0
     path = '../'
     filename = 'input3.points'
@@ -29,15 +34,19 @@ def main():
         filename = 'input2.points'
         filename = 'input.points'
         filename = 'input3.points'
+        filename = 'generatGraph/tests0.txt'
 
         i += 1
-        geo = False
+        geo = True
         if geo:
-            edges, edgesDist, matrixAdj = getEdges(path + filename)
+            edges, edgesDist, matrixAdj = getEdges(path + filename, isFloat=isFloat)
         else:
-            matrixAdj = getMatrixAdjFile(path + filename)
-            edges = getEdgesFile(path + filename)
-        vertices = getVerticesG(path + filename, geo=geo)
+            matrixAdj = getMatrixAdjFile(path + filename, isFloat=isFloat)
+            edges = getEdgesFile(path + filename, isFloat=isFloat)
+
+        vertices = getVerticesG(path + filename, geo=geo, isFloat=isFloat)
+        print(" vertices : ", len(vertices))
+        print(" edges : ", len(edges))
 
         print(" +++++++++++++++ algo Article ", filename, " +++++++++++++++ ")
         tmps1 = time.process_time()
@@ -47,6 +56,8 @@ def main():
         talgoLi = tmps2 - tmps1
         cdsLi = list(noir) + list(bleu)
         print("cdsLi len : ", len(cdsLi))
+        MISinFile(list(noir) + list(bleu), vertices)
+
         print(" --------------- FIN algo Article  avec ", filename, " --------------- ")
         print()
         print()
@@ -54,7 +65,7 @@ def main():
         G = nx.Graph()
         G.add_edges_from(edges)
         tmps1 = time.process_time()
-        cdsA = min_connected_dominating_sets_non_distributed(G)
+        cdsA = MCDS(G)
         tmps2 = time.process_time()
         talgoA = tmps2 - tmps1
         print("cds len : ", len(cdsA))

@@ -1,9 +1,9 @@
-from algos.AlgoAricle import *
-from algos.EnsembleDSageM import *
+from algorithms.AlgoAricle import *
+from algorithms.EnsembleDSageM import *
 import time
 
-from algos.algoAvril import *
-from algos.algoPlus import MISC
+from algorithms.algoAvril import *
+from algorithms.algoPlus import MISC
 
 path = "../"
 f1 = "input.points"
@@ -22,7 +22,7 @@ vertices = getVerticesG(path + f1, geo=geo)
 # itemMaxValue = max(matrixAdjT.items(), key=lambda x: len(x[1]["voisins"]))
 
 edges = list(map(list, a))
-matrixAdj2 = {0: {"voisins": [1], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False, "inComposant": [0]},
+matrixAdja = {0: {"voisins": [1], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False, "inComposant": [0]},
               1: {"voisins": [0, 2, 5, 8], 'label': None, 'color': 'blanc', 'nbV': 4, "composant": False,
                   "inComposant": [1]},
               2: {"voisins": [1, 5, 3], 'label': None, 'color': 'blanc', 'nbV': 3, "composant": False,
@@ -134,21 +134,19 @@ matrixAdjp = {1: {"voisins": [2, 3, 4], 'label': None, 'color': 'blanc', 'nbV': 
 verticesIdP = getVertices(path + f1)
 
 # ALGO article
-# tmps1 = time.clock()
-# noir = MIS(matrixAdj)
-# bleu = A(matrixAdj)
-# tmps2 = time.clock()
-# print("[MIS] + [A] Temps d'execution = ", tmps2 - tmps1)
-# print(" noir : ", len(noir))
-# print(" bleu : ", len(bleu))
-# MISinFile(list(noir) + list(bleu), verticesIdP)
+noir = MIS(matrixAdj)
+bleu = A(matrixAdj)
+
+print(" noir : ", len(noir))
+print(" bleu : ", len(bleu))
+MISinFile(list(noir) + list(bleu), verticesIdP)
 #############################################################
 # ALGO plus
 # MISC(matrixAdj)
 
 # ALGO avril
-verticesToVisite = list(matrixAdj.keys())
-noir, matrixAdj = IC_MIS(matrixAdj)
-print("noir : ", len(noir))
+# verticesToVisite = list(matrixAdj.keys())
+# noir, matrixAdj = IC_MIS(matrixAdj)
+# print("noir : ", len(noir))
 # bleu = Kruskal(matrixAdj, list(noir))
-MISinFile(list(noir), verticesIdP)
+# MISinFile(list(noir), verticesIdP)

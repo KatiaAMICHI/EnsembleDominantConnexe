@@ -10,10 +10,12 @@ import os
 import numpy as np
 import csv
 
+# d = 55
+d = 0.135
 d = 55
 
 
-def getVertices(filename):
+def getVertices(filename, isFloat=False):
     """
     retourne une map <identifiant sommet, position(x,y) sommet>
     :param filename:
@@ -21,40 +23,50 @@ def getVertices(filename):
     """
     f = open(filename, 'r')
     vertices = f.read().splitlines()
-    res = list(map(lambda x: (int(x.split(' ')[0]), int(x.split(' ')[1])), vertices))
+    if isFloat:
+        res = list(map(lambda x: (float(x.split(' ')[0]), float(x.split(' ')[1])), vertices))
+    else:
+        res = list(map(lambda x: (int(x.split(' ')[0]), int(x.split(' ')[1])), vertices))
     # un id pour chaque noeud { id : Point(x,y) ....}
     verticesIdP = dict(enumerate(res, 0))
 
     return verticesIdP
 
 
-def getVerticesFile(file):
+def getVerticesFile(file, isFloat=False):
     # cmd = "tr '\t' '\n' < " + file + " | sort | uniq"
     cmd = "tr ' ' '\n' < " + file + " | sort | uniq"
     vertices = os.popen(cmd).read().split('\n')
     del vertices[-1]
-    vertices = list(map(int, vertices))
+    if isFloat:
+        vertices = list(map(float, vertices))
+    else:
+        vertices = list(map(int, vertices))
 
     return vertices
 
 
-def getEdgesFile(file):
+def getEdgesFile(file, isFloat):
     with open(file, 'r') as f:
         reader = f.read().splitlines()
         # edges = list(map(lambda x: (int(x.split('\t')[0]), int(x.split('\t')[1])), reader))
-        edges = list(map(lambda x: (int(x.split(' ')[0]), int(x.split(' ')[1])), reader))
+        if isFloat:
+            edges = list(map(lambda x: (float(x.split(' ')[0]), float(x.split(' ')[1])), reader))
+        else:
+            edges = list(map(lambda x: (int(x.split(' ')[0]), int(x.split(' ')[1])), reader))
+    print("[getEdgesFile] edges : ", len(edges))
     return edges
 
 
-def getVerticesG(file, geo=False):
+def getVerticesG(file, geo=False, isFloat=False):
     if geo:
-        return getVertices(file)
-    return getVerticesFile(file)
+        return getVertices(file, isFloat)
+    return getVerticesFile(file, isFloat)
 
 
-def getMatrixAdjFile(file):
-    vertices = getVerticesFile(file)
-    edges = getEdgesFile(file)
+def getMatrixAdjFile(file, isFloat=False):
+    vertices = getVerticesFile(file, isFloat)
+    edges = getEdgesFile(file, isFloat)
 
     matrixAdj = defaultdict()
 
@@ -71,8 +83,8 @@ def getMatrixAdjFile(file):
     return matrixAdj
 
 
-def getEdges(file):
-    verticesIdP = getVertices(file)
+def getEdges(file, isFloat=False):
+    verticesIdP = getVertices(file, isFloat)
 
     matrixAdj = defaultdict()
     for v in verticesIdP:

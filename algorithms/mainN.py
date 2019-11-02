@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-#
 
 
-from algos.v1 import *
+from algorithms.v1 import *
 
 edges = [[1, 2], [1, 3], [1, 4], [2, 5], [2, 6], [3, 6], [3, 7], [3, 8], [4, 8], [4, 9], [5, 10], [9, 12],
          [6, 10],

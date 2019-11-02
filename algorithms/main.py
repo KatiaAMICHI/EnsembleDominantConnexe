@@ -1,16 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-#
 
-from algos.EnsembleDSageM import *
-from algos.v1 import *
+from algorithms.EnsembleDSageM import *
+from algorithms.v1 import *
 import sys
 import os
 import csv
-from algos.AlgoAricle import *
-from algos.EnsembleDSageM import getEdges, MISinFile
+from algorithms.AlgoAricle import *
+from algorithms.EnsembleDSageM import getEdges, MISinFile
 import time
 
-from algos.algoAvril import *
+from algorithms.algoAvril import *
 
 
 def main():
@@ -20,7 +20,8 @@ def main():
 
     resultDataset = r'../result/' + Dataset + '/results' + Dataset + '.csv'
     csv_Times = open(resultDataset, mode='w')
-    fieldnamesTimesDataset = ["Dataset", "nbFile", "V", "E", "TalgoLi&", "TalgoA", "TalgoX", "NBalgoLi&", "NBalgoA", "NBalgoX"]
+    fieldnamesTimesDataset = ["Dataset", "nbFile", "V", "E", "TalgoLi&", "TalgoA", "TalgoX", "NBalgoLi&", "NBalgoA",
+                              "NBalgoX"]
     writerTimesDataset = csv.DictWriter(csv_Times, fieldnames=fieldnamesTimesDataset)
     writerTimesDataset.writeheader()
 

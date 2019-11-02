@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class GraphGenerator {
 	private static String filename = "Kinput.points";
-	private static int numberOfPoints = 500;
+	private static int numberOfPoints = 300;
 	private static int maxWidth = 1400;
 	private static int maxHeight = 900;
 	private static int radius = 140;
@@ -26,12 +26,11 @@ public class GraphGenerator {
 	public static void main(String[] args) {
 		try {
 			for(int e = 0; e < 100; ++e) {
-				PrintStream output = new PrintStream(new FileOutputStream("tests/input" + e + ".points"));
+				PrintStream output = new PrintStream(new FileOutputStream("../tests/input" + e + ".points"));
 				Random generator = new Random();
 				ArrayList<Point> points = new ArrayList<>();
 
 
-				//for(int i = 0; i < numberOfPoints; ++i) {
 				while(points.size()!=numberOfPoints){
 					System.out.println(points.size());
 					int x;
@@ -68,7 +67,6 @@ public class GraphGenerator {
 						output.println(Integer.toString(x) + " " + Integer.toString(y));
 					}
 				}
-				//}
 
 				output.close();
 			}
