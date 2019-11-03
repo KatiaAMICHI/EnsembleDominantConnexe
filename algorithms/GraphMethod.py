@@ -1,14 +1,5 @@
-from collections import defaultdict
-from operator import or_
-from functools import reduce
-from operator import itemgetter
-import pprint
-import re
 import os
-# import pandas as pd
-# from sage.all import *
-import numpy as np
-import csv
+from collections import defaultdict
 
 
 def getVertices(filename, isFloat=False, firstLineIgnore=False):
@@ -161,16 +152,3 @@ def MISinFile(noir, verticesIdP):
         pointsOutput.append(verticesIdP[v])
 
     open("OutputFile", 'w').write('\n'.join('%s %s' % x for x in pointsOutput))
-
-
-"""
-edgesList = str(sys.argv[1]).split(".")
-edges = []
-for e in edgesList:
-    edges.append(list(map(int, e.split(","))))
-
-g = Graph(edges)
-first5 = g.vertices()[:5]
-st = g.steiner_tree(first5)
-st.is_tree()
-"""

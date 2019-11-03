@@ -4,7 +4,7 @@ from collections import defaultdict
 import networkx as nx
 import matplotlib.pyplot as plt
 
-from algorithms.EnsembleDSageM import getDis
+from algorithms.GraphMethod import getDis
 from generatGraph.generateGeoGraph import dataToFile
 
 a = 25214903917

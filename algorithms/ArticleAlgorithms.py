@@ -1,7 +1,6 @@
 from functools import reduce
 from operator import itemgetter
 from operator import or_
-import networkx as nx
 
 dictComposion = {}
 

@@ -1,5 +1,5 @@
 from algorithms.ArticleAlgorithms import *
-from algorithms.EnsembleDSageM import *
+from algorithms.GraphMethod import *
 import time
 
 from algorithms.algoAvril import *

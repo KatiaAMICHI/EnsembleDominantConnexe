@@ -4,10 +4,10 @@
 import time
 
 from algorithms.ArticleAlgorithms import *
-from algorithms.EnsembleDSageM import *
-from algorithms.EnsembleDSageM import getEdges
+from algorithms.GraphMethod import *
+from algorithms.GraphMethod import getEdges
 import networkx as nx
-from algorithms.v1 import MCDS
+from algorithms.MCDS import MCDS
 
 
 def main():

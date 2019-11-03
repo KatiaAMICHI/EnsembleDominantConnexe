@@ -1,16 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-#
 
-from algorithms.EnsembleDSageM import *
-from algorithms.v1 import *
-import sys
-import os
-import csv
-from algorithms.ArticleAlgorithms import *
-from algorithms.EnsembleDSageM import getEdges, MISinFile
-import time
 
-from algorithms.algoAvril import *
+import csv
+import time
+import sys
+
+from algorithms.ArticleAlgorithms import *
+from algorithms.GraphMethod import *
+from algorithms.GraphMethod import getEdges
+from algorithms.MCDS import *
+
 
 
 def main():
@@ -118,4 +118,4 @@ def main():
     print(" ............................... FIN ...............................")
 
 
-main()
+# main()

@@ -1,0 +1,2 @@
+Pour tester les programme faut la comande suivant :
+python3.7 mainFile.py [PATH_FILE]
