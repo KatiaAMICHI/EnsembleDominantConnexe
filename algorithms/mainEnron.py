@@ -6,7 +6,7 @@ from algorithms.v1 import *
 import sys
 import os
 import csv
-from algorithms.AlgoAricle import *
+from algorithms.ArticleAlgorithms import *
 from algorithms.EnsembleDSageM import getEdges, MISinFile
 import time
 

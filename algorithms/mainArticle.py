@@ -1,4 +1,4 @@
-from algorithms.AlgoAricle import *
+from algorithms.ArticleAlgorithms import *
 from algorithms.EnsembleDSageM import *
 import time
 
@@ -11,18 +11,19 @@ f1 = "input4.points"
 # VerticesIdP  un id pour chaque noeud { id : Point(x,y) ....}
 
 geo = True
+geo = False
 if geo:
     a, edgesDist, matrixAdj = getEdges(path + f1)
 else:
     matrixAdj = getMatrixAdjFile(path + f1)
-    a = getEdgesFile(path + f1)
+    a = getEdgesFile(path + f1, False)
 vertices = getVerticesG(path + f1, geo=geo)
 
 # trouver l'element max dans notre dict par rapport au nb voisins
 # itemMaxValue = max(matrixAdjT.items(), key=lambda x: len(x[1]["voisins"]))
 
 edges = list(map(list, a))
-matrixAdja = {0: {"voisins": [1], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False, "inComposant": [0]},
+matrixAdj = {0: {"voisins": [1], 'label': None, 'color': 'blanc', 'nbV': 1, "composant": False, "inComposant": [0]},
               1: {"voisins": [0, 2, 5, 8], 'label': None, 'color': 'blanc', 'nbV': 4, "composant": False,
                   "inComposant": [1]},
               2: {"voisins": [1, 5, 3], 'label': None, 'color': 'blanc', 'nbV': 3, "composant": False,

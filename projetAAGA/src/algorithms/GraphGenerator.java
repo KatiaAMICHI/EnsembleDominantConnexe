@@ -21,9 +21,9 @@ public class GraphGenerator {
 	private static int numberOfPoints = 1000;
 	private static int nbFiles = 1400;
 
-	private static int maxWidth = 1400;
-	private static int maxHeight = 900;
-	private static int radius = 140;
+	private static int maxWidth = 1600;
+	private static int maxHeight =1000;
+	private static int radius = 150;
 	static byte edgeThreshold = 55;
 
 	public GraphGenerator() {
@@ -69,7 +69,8 @@ public class GraphGenerator {
 							x = generator.nextInt(maxWidth);
 							y = generator.nextInt(maxHeight);
 						} while (distanceToCenter(x, y) >= (double) radius * 1.4D
-								&& (distanceToCenter(x, y) >= (double) radius * 1.6D || generator.nextInt(5) != 1)
+								&& (distanceToCenter(x, y) >= (double) radius * 1.6D || 
+									generator.nextInt(5) != 1)
 								&& (distanceToCenter(x, y) >= (double) radius * 1.8D || generator.nextInt(10) != 1)
 								&& (maxHeight / 9 >= x || x >= 4 * maxHeight / 5 || maxHeight / 9 >= y
 										|| y >= 7 * maxHeight / 9 || generator.nextInt(100) != 1));
@@ -175,10 +176,15 @@ public class GraphGenerator {
 				x = generator.nextInt(maxWidth);
 				y = generator.nextInt(maxHeight);
 			} while (distanceToCenter(x, y) >= (double) radius * 1.4D
-					&& (distanceToCenter(x, y) >= (double) radius * 1.6D || generator.nextInt(5) != 1)
-					&& (distanceToCenter(x, y) >= (double) radius * 1.8D || generator.nextInt(10) != 1)
-					&& (maxHeight / 5 >= x || x >= 4 * maxHeight / 5 || maxHeight / 5 >= y || y >= 4 * maxHeight / 5
-							|| generator.nextInt(100) != 1));
+					&& (distanceToCenter(x, y) >= (double) radius * 1.6D || 
+						generator.nextInt(5) != 1)
+					&& (distanceToCenter(x, y) >= (double) radius * 1.8D || 
+						generator.nextInt(10) != 1)
+					&& (x < maxHeight / 5 || 
+							x >= 4 * maxHeight / 5 || 
+							y < maxHeight / 5 || 
+							y >= 4 * maxHeight / 5 || 
+							generator.nextInt(100) != 1));
 			res.add(new Point(x, y));
 		}
 		return res;

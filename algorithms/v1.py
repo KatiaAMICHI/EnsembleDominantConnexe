@@ -1,11 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import networkx as nx
-import networkx.algorithms.approximation as nxaa
-from collections import deque
 import copy
 import operator
+from collections import deque
+import networkx as nx
 
 
 def MCDS(G):

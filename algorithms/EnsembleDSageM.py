@@ -10,14 +10,8 @@ import os
 import numpy as np
 import csv
 
-# d = 55
-d = 55 * 10
-d = 55
-d = 125
-d = 100
 
-
-def getVertices(filename, isFloat=False):
+def getVertices(filename, isFloat=False, firstLineIgnore=False):
     """
     retourne une map <identifiant sommet, position(x,y) sommet>
     :param filename:
@@ -25,6 +19,8 @@ def getVertices(filename, isFloat=False):
     """
     f = open(filename, 'r')
     vertices = f.read().splitlines()
+    del vertices[0]
+
     if isFloat:
         res = list(map(lambda x: (float(x.split(' ')[0]), float(x.split(' ')[1])), vertices))
     else:
@@ -35,7 +31,7 @@ def getVertices(filename, isFloat=False):
     return verticesIdP
 
 
-def getVerticesFile(file, isFloat=False):
+def getVerticesFile(file, isFloat=False, firstLineIgnore=False):
     # cmd = "tr '\t' '\n' < " + file + " | sort | uniq"
     cmd = "tr ' ' '\n' < " + file + " | sort | uniq"
     vertices = os.popen(cmd).read().split('\n')
@@ -48,7 +44,7 @@ def getVerticesFile(file, isFloat=False):
     return vertices
 
 
-def getEdgesFile(file, isFloat):
+def getEdgesFile(file, isFloat, firstLineIgnore=False):
     with open(file, 'r') as f:
         reader = f.read().splitlines()
         # edges = list(map(lambda x: (int(x.split('\t')[0]), int(x.split('\t')[1])), reader))
@@ -66,9 +62,9 @@ def getVerticesG(file, geo=False, isFloat=False):
     return getVerticesFile(file, isFloat)
 
 
-def getMatrixAdjFile(file, isFloat=False):
-    vertices = getVerticesFile(file, isFloat)
-    edges = getEdgesFile(file, isFloat)
+def getMatrixAdjFile(file, isFloat=False, firstLineIgnore=False):
+    vertices = getVerticesFile(file, isFloat, firstLineIgnore=firstLineIgnore)
+    edges = getEdgesFile(file, isFloat, firstLineIgnore=firstLineIgnore)
 
     matrixAdj = defaultdict()
 
@@ -85,8 +81,8 @@ def getMatrixAdjFile(file, isFloat=False):
     return matrixAdj
 
 
-def getEdges(file, isFloat=False):
-    verticesIdP = getVertices(file, isFloat)
+def getEdges(file, d, isFloat=False, firstLineIgnore=False):
+    verticesIdP = getVertices(file, isFloat, firstLineIgnore=firstLineIgnore)
 
     matrixAdj = defaultdict()
     for v in verticesIdP:
@@ -98,7 +94,7 @@ def getEdges(file, isFloat=False):
             if u == v:
                 continue
             dis = getDis(verticesIdP, u, v)
-            if isNeighbor(verticesIdP, u, v):
+            if isNeighbor(verticesIdP, u, v, d):
                 matrixAdj[u]["voisins"].add(v)
                 matrixAdj[v]["voisins"].add(u)
                 matrixAdj[u]["nbV"] += 1
@@ -120,7 +116,7 @@ def getMaxVwDegreeWithL(matrixAdj, l):
     return max(l, key=lambda x: matrixAdj[x]["nbV"])
 
 
-def isNeighbor(verticesIdP, u, v):
+def isNeighbor(verticesIdP, u, v, d):
     return getDis(verticesIdP, u, v) < (d * d)
 
 

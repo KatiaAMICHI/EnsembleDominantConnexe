@@ -1,6 +1,5 @@
 import copy
 
-import networkx as nx
 import matplotlib.pyplot as plt
 import networkx as nx
 
@@ -9,51 +8,41 @@ path = "../" + Dataset + "/"
 NBFILES = 4
 
 
-def dataToFile(file, result):
+def dataToFile(file, result, nbNode, d):
     with open(file, 'w') as f:
+        # premiere ligne [nombre de noeud, la distance]
+        f.write(str(nbNode) + " " + str(d) + "\n")
+
         for line in result:
             f.write(str(line[0]) + " " + str(line[1]) + "\n")
 
 
-def random_geometric_graph_networkxV1():
-    d = 55
+def random_geometric_graph_networkx_Tests():
+    d = 70
 
-    for nb in range(NBFILES):
-        nbNode = 400
+    for i in range(0, 20):
+        for e in range(50, 101):
+            if e in range(700, 950):
+                d = 60
+            if e >= 950:
+                d = 55
 
-        if nb in range(0, 1):
-            # ok
-            d = 125
-            nbNode = 500
+            print(" ........................................................................................ ")
+            G = nx.random_geometric_graph(e * 10, d)
 
-        if nb in range(1, 2):
-            d = 80
-            nbNode = 500
+            print("nx.is_connected(G) : ", nx.is_connected(G))
+            while not nx.is_connected(G):
+                G = nx.random_geometric_graph(e * 10, d)
 
-        if nb in range(2, 3):
-            # ok
-            d = 100
-            nbNode = 700
+            pos = nx.get_node_attributes(G, 'pos')
+            print(">>> nx.is_connected(G) : ", nx.is_connected(G))
 
-        if nb in range(3, 4):
-            d = 55
-            nbNode = 1000
-
-        G = nx.random_geometric_graph(nbNode, d * 10)
-
-        print("nx.is_connected(G) : ", nx.is_connected(G))
-        while not nx.is_connected(G):
-            G = nx.random_geometric_graph(500, d * 10)
-
-        pos = nx.get_node_attributes(G, 'pos')
-        print("pos : ", pos.values())
-
-        dataToFile("tests0.txt", pos.values())
+            dataToFile("../res/GenNetworkx/tests" + str(i) + "_" + str(e * 10) + ".point", pos.values(), e * 10, d)
 
 
-def random_geometric_graph_networkx():
-    d = 100
-    nbPoint = 700
+def random_geometric_graph_networkx_file():
+    d = 70
+    nbPoint = 500
 
     G = nx.random_geometric_graph(nbPoint, d)
 
@@ -62,13 +51,7 @@ def random_geometric_graph_networkx():
         G = nx.random_geometric_graph(nbPoint, d)
 
     pos = nx.get_node_attributes(G, 'pos')
-    print("pos : ", pos.values())
     print(">>> nx.is_connected(G) : ", nx.is_connected(G))
-
-    dataToFile("tests0.txt", pos.values())
-    # position is stored as node attribute data for random_geometric_graph
-
-    pos = nx.get_node_attributes(G, 'pos')
 
     # find node near center (0.5,0.5)
     dmin = 1
@@ -116,4 +99,5 @@ def randomGeoGraphAG():
     print("nx.is_connected(G) : ", nx.is_connected(G))
 
 
-random_geometric_graph_networkx()
+# random_geometric_graph_networkx_Tests()
+# random_geometric_graph_networkx_file()
