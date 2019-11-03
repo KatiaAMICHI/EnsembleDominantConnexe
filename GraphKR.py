@@ -4,7 +4,7 @@
 
 
 # Class to represent a graph
-from algos.EnsembleDSageM import getEdges, verticesIdP
+from algorithms.EnsembleDSageM import getEdges, verticesIdP
 
 
 class Graph:

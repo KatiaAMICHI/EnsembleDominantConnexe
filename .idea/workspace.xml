@@ -2,40 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c52037da-fb37-47dd-976e-91b6289938ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/algorithms/drawResults.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/GenTests/tests0_500.point" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/GenTests/tests0_510.point" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/GenTests/tests0_520.point" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/GenTests/tests0_530.point" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/result/ResultDBs.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/algorithms/mainGenGA.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/generatGraph/randomGA.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/AlgoAricle.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/ArticleAlgorithms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/EnsembleDSageM.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/EnsembleDSageM.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/OutputFile" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/OutputFile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/mainGenJava.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/mainArticle.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/mainArticle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/mainEnron.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/mainEnron.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/mainFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/mainFile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/v1.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/v1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GraphKR.py" beforeDir="false" afterPath="$PROJECT_DIR$/GraphKR.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/drawResults.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/drawResults.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/generatGraph/generateGeoGraph.py" beforeDir="false" afterPath="$PROJECT_DIR$/generatGraph/generateGeoGraph.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generatGraph/tests0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/generatGraph/tests0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetAAGA/javabeans/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/projetAAGA/javabeans/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetAAGA/javabeans/algorithms/GraphGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/projetAAGA/javabeans/algorithms/GraphGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projetAAGA/src/algorithms/GraphGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/projetAAGA/src/algorithms/GraphGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/GenJava/input1.points" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/GenJava/input19.points" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/GenJava/input22.points" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/GenJava/input3.points" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/GenJava/input4.points" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/GenJava/input5.points" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/GenJava/input6.points" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/GenJava/input76.points" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/GenJava/input8.points" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/GenJava/resultsFilesGenJava.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/GenJava/resultsFilesGenJava.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/GenJava/resultsGenJava.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/GenJava/resultsGenJava.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/Rollernet/resultsFilesRollernet.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/Rollernet/resultsFilesRollernet.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/Rollernet/resultsRollernet.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/Rollernet/resultsRollernet.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result/results.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/results.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result/ResultDBs.csv" beforeDir="false" afterPath="$PROJECT_DIR$/result/ResultDBs.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,31 +22,44 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algorithms/ArticleAlgorithms.py">
+        <entry file="file://$PROJECT_DIR$/generatGraph/randomGA.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="107" selection-end-line="107" />
+            <state relative-caret-position="414">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#2328#3058#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/result/GenJava/resultsGenJava.csv">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/generatGraph/geShell.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="162">
+              <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/asupp.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="550">
+              <caret line="2259" column="28" selection-start-line="2259" selection-end-line="2259" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/result/GenNetworkx/resultsGenNetworkx.csv">
+        <entry file="file://$PROJECT_DIR$/algorithms/mainGenGA.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" lean-forward="true" selection-end-line="2" />
+            <state relative-caret-position="216">
+              <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+              <folding>
+                <element signature="e#48#59#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -94,7 +80,6 @@
       <find>dataToCsv</find>
       <find>verticesIdP</find>
       <find>55</find>
-      <find>algos</find>
       <find>filter</find>
       <find>sorted</find>
       <find>is_conn</find>
@@ -103,6 +88,10 @@
       <find>d</find>
       <find>dataT</find>
       <find>dataNB</find>
+      <find>randomGA</find>
+      <find>dict</find>
+      <find>algo</find>
+      <find>algos</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -127,7 +116,6 @@
         <option value="$PROJECT_DIR$/projetAAGA/src/algorithms/GraphGenerator.java" />
         <option value="$PROJECT_DIR$/projetAAGA/src/algorithms/TestSize.java" />
         <option value="$PROJECT_DIR$/algorithms/mainEnron.py" />
-        <option value="$PROJECT_DIR$/asupp.txt" />
         <option value="$PROJECT_DIR$/projetAAGA/input.points" />
         <option value="$PROJECT_DIR$/algorithms/EnsembleDSageM.py" />
         <option value="$PROJECT_DIR$/algorithms/mainArticle.py" />
@@ -137,14 +125,21 @@
         <option value="$USER_HOME$/PycharmProjects/testPythonDaar/venv/lib/python3.7/site-packages/networkx/generators/geometric.py" />
         <option value="$PROJECT_DIR$/algorithms/mainGenJava.py" />
         <option value="$PROJECT_DIR$/algorithms/mainFile.py" />
-        <option value="$PROJECT_DIR$/generatGraph/generateGeoGraph.py" />
-        <option value="$PROJECT_DIR$/algorithms/drawResults.py" />
         <option value="$PROJECT_DIR$/algorithms/ArticleAlgorithms.py" />
         <option value="$PROJECT_DIR$/result/Result.csv" />
+        <option value="$USER_HOME$/PycharmProjects/testPythonDaar/venv/lib/python3.7/site-packages/matplotlib/pyplot.py" />
+        <option value="$PROJECT_DIR$/algorithms/drawResults.py" />
+        <option value="$PROJECT_DIR$/result/ResultDBs.csv" />
+        <option value="$PROJECT_DIR$/GraphKR.py" />
+        <option value="$PROJECT_DIR$/generatGraph/generateGeoGraph.py" />
+        <option value="$PROJECT_DIR$/algorithms/mainGenGA.py" />
+        <option value="$PROJECT_DIR$/generatGraph/randomGA.py" />
+        <option value="$PROJECT_DIR$/asupp.txt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="960" />
     <option name="y" value="19" />
     <option name="width" value="960" />
     <option name="height" value="1060" />
@@ -158,6 +153,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -175,33 +171,10 @@
               <item name="EnsembleDominantConnexe" type="462c0819:PsiDirectoryNode" />
               <item name="generatGraph" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="EnsembleDominantConnexe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EnsembleDominantConnexe" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EnsembleDominantConnexe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EnsembleDominantConnexe" type="462c0819:PsiDirectoryNode" />
-              <item name="result" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EnsembleDominantConnexe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EnsembleDominantConnexe" type="462c0819:PsiDirectoryNode" />
-              <item name="result" type="462c0819:PsiDirectoryNode" />
-              <item name="GenJava" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EnsembleDominantConnexe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EnsembleDominantConnexe" type="462c0819:PsiDirectoryNode" />
-              <item name="result" type="462c0819:PsiDirectoryNode" />
-              <item name="GenNetworkx" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -217,17 +190,17 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/res" />
-      <recent name="$PROJECT_DIR$/projetAAGA" />
-      <recent name="$PROJECT_DIR$/projetAAGA/src" />
-      <recent name="$PROJECT_DIR$/pngRapport" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/algorithms" />
       <recent name="$PROJECT_DIR$/res/GenTests" />
       <recent name="$PROJECT_DIR$/generatData" />
       <recent name="$PROJECT_DIR$/algos" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/res" />
+      <recent name="$PROJECT_DIR$/projetAAGA" />
+      <recent name="$PROJECT_DIR$/projetAAGA/src" />
+      <recent name="$PROJECT_DIR$/pngRapport" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -242,7 +215,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.generateGeoGraph">
+  <component name="RunManager" selected="Python.mainGenGA">
+    <configuration name="drawResults" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="EnsembleDominantConnexe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithms" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithms/drawResults.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="generateGeoGraph" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="EnsembleDominantConnexe" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -256,27 +250,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/generatGraph/generateGeoGraph.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="mainArticle" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="EnsembleDominantConnexe" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithms" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithms/mainArticle.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -306,7 +279,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mainGenJava" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="mainGenGA" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="EnsembleDominantConnexe" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -318,7 +291,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithms/mainGenJava.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithms/mainGenGA.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -327,7 +300,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mainGenJavaV2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="randomGA" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="EnsembleDominantConnexe" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -335,11 +308,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithms" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/generatGraph" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithms/mainGenJavaV2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/generatGraph/randomGA.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -350,11 +323,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.mainGenGA" />
+        <item itemvalue="Python.randomGA" />
         <item itemvalue="Python.generateGeoGraph" />
+        <item itemvalue="Python.drawResults" />
         <item itemvalue="Python.mainFile" />
-        <item itemvalue="Python.mainGenJava" />
-        <item itemvalue="Python.mainGenJavaV2" />
-        <item itemvalue="Python.mainArticle" />
       </list>
     </recent_temporary>
   </component>
@@ -392,13 +365,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="19" width="1920" height="1060" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49847096" visible="true" weight="0.19514768" />
       <window_info id="Structure" order="1" sideWeight="0.50152904" side_tool="true" weight="0.19514768" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.3294204" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32930845" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994726" visible="true" weight="0.3205269" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4994726" visible="true" weight="0.22612514" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -463,61 +437,6 @@
     <SUITE FILE_PATH="coverage/EnsembleDominant$graph.coverage" NAME="graph Coverage Results" MODIFIED="1571207108563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/generatGraph/tests0.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2795">
-          <caret line="16" column="6" lean-forward="true" selection-end-line="700" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetAAGA/input.points">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="975" column="7" lean-forward="true" selection-start-line="975" selection-start-column="7" selection-end-line="975" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/mainFileTest.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/GenNetworkx/tests50.point">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1890" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/GenNetworkx/tests0_510.point">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/GenNetworkx/tests0_520.point">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12101" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/GenNetworkx/tests0_570.point">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12101" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/GenTests/tests0_500.point">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="7" lean-forward="true" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetAAGA/src/algorithms/TestSize.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1237">
-          <caret line="79" column="43" selection-start-line="79" selection-start-column="43" selection-end-line="79" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/GenTests/tests0_510.point">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/result/GenTests/resultsGenTests.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/GenNetworkx/tests0_500.point">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-8501" />
@@ -558,61 +477,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/GenJava/input1.points">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/GenJava/input3.points">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/GenJava/input4.points">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/GenJava/input5.points">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/GenJava/input6.points">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/GenJava/input8.points">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/GenJava/input19.points">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/GenJava/input22.points">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/GenJava/input76.points">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/res/GenJava/input1.points" />
+    <entry file="file://$PROJECT_DIR$/res/GenJava/input3.points" />
+    <entry file="file://$PROJECT_DIR$/res/GenJava/input4.points" />
+    <entry file="file://$PROJECT_DIR$/res/GenJava/input5.points" />
+    <entry file="file://$PROJECT_DIR$/res/GenJava/input6.points" />
+    <entry file="file://$PROJECT_DIR$/res/GenJava/input8.points" />
+    <entry file="file://$PROJECT_DIR$/res/GenJava/input19.points" />
+    <entry file="file://$PROJECT_DIR$/res/GenJava/input22.points" />
+    <entry file="file://$PROJECT_DIR$/res/GenJava/input76.points" />
     <entry file="file://$PROJECT_DIR$/res/GenJava/input1035.points">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/mainGenJavaV2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="23" column="61" selection-start-line="23" selection-start-column="61" selection-end-line="23" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/mainGenJavaV2.py" />
     <entry file="file://$PROJECT_DIR$/res/GenJava/input256.points">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-          <folding>
-            <element signature="e#48#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/result/GenTests/resultsFilesGenTests.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/main.py" />
+    <entry file="file://$PROJECT_DIR$/result/GenTests/resultsFilesGenTests.csv" />
     <entry file="file://$PROJECT_DIR$/algorithms/v1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -634,46 +516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/mainGenJava.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding>
-            <element signature="e#48#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/drawResults.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generatGraph/generateGeoGraph.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="97" lean-forward="true" selection-start-line="97" selection-end-line="97" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/PycharmProjects/testPythonDaar/venv/lib/python3.7/site-packages/networkx/generators/geometric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="151" column="53" selection-start-line="151" selection-start-column="53" selection-end-line="151" selection-end-column="53" />
-          <folding>
-            <element signature="e#480#511#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/mainEnron.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -689,13 +531,6 @@
         <state relative-caret-position="-12456" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/mainFile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="38" column="61" selection-start-line="38" selection-start-column="61" selection-end-line="38" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/extractRollernet/extractRollernet9200.points">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-6929" />
@@ -706,16 +541,6 @@
         <state relative-caret-position="-11357" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algorithms/EnsembleDSageM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="162" selection-start-line="162" selection-end-line="162" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/algorithms/ArticleAlgorithms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
@@ -723,20 +548,6 @@
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/result/GenNetworkx/resultsGenNetworkx.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" lean-forward="true" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/result/ResultDBs.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -750,10 +561,161 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/result/ResultDBs.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/drawResults.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="49" column="16" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/result/GenJava/resultsGenJava.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/mainGenJava.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="68" column="16" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="16" />
+          <folding>
+            <element signature="e#48#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/testPythonDaar/venv/lib/python3.7/site-packages/numpy/lib/stride_tricks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="603">
+          <caret line="263" selection-start-line="263" selection-end-line="263" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/testPythonDaar/venv/lib/python3.7/site-packages/matplotlib/axes/_axes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="2374" selection-start-line="2374" selection-end-line="2374" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/testPythonDaar/venv/lib/python3.7/site-packages/matplotlib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="1600" selection-start-line="1600" selection-end-line="1600" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/testPythonDaar/venv/lib/python3.7/site-packages/matplotlib/pyplot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="2437" selection-start-line="2437" selection-end-line="2437" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/testPythonDaar/venv/lib/python3.7/site-packages/pandas/io/parsers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="1917" column="53" lean-forward="true" selection-start-line="1917" selection-start-column="53" selection-end-line="1917" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/result/GenNetworkx/resultsGenNetworkx.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" lean-forward="true" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraphKR.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="59" lean-forward="true" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/EnsembleDSageM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="103" column="46" lean-forward="true" selection-start-line="103" selection-start-column="46" selection-end-line="103" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/mainFile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="43" column="46" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generatGraph/generateGeoGraph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="37" column="52" selection-end-line="82" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/GenGA/tests0_500.point">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algorithms/mainGenGA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+          <folding>
+            <element signature="e#48#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generatGraph/randomGA.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#2328#3058#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/testPythonDaar/venv/lib/python3.7/site-packages/networkx/generators/geometric.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2826">
+          <caret line="157" column="27" selection-start-line="156" selection-start-column="4" selection-end-line="157" selection-end-column="27" />
+          <folding>
+            <element signature="e#480#511#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generatGraph/geShell.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asupp.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="2259" column="28" selection-start-line="2259" selection-end-line="2259" selection-end-column="28" />
         </state>
       </provider>
     </entry>

@@ -1,4 +1,5 @@
 import copy
+import random
 
 import matplotlib.pyplot as plt
 import networkx as nx
@@ -17,22 +18,24 @@ def dataToFile(file, result, nbNode, d):
             f.write(str(line[0]) + " " + str(line[1]) + "\n")
 
 
-def random_geometric_graph_networkx_Tests():
+def random_geometric_graph_networkxDS():
     d = 70
 
     for i in range(0, 20):
         for e in range(50, 101):
+            nbNode = e * 10
+
             if e in range(700, 950):
                 d = 60
             if e >= 950:
                 d = 55
 
             print(" ........................................................................................ ")
-            G = nx.random_geometric_graph(e * 10, d)
+            G = nx.random_geometric_graph(nbNode, d)
 
             print("nx.is_connected(G) : ", nx.is_connected(G))
             while not nx.is_connected(G):
-                G = nx.random_geometric_graph(e * 10, d)
+                G = nx.random_geometric_graph(nbNode, d)
 
             pos = nx.get_node_attributes(G, 'pos')
             print(">>> nx.is_connected(G) : ", nx.is_connected(G))
@@ -77,27 +80,3 @@ def random_geometric_graph_networkx_file():
     plt.ylim(-0.05, 1.05 * 1000)
     plt.axis('off')
     plt.show()
-
-
-def randomGeoGraphAG():
-    nbNode = 500
-    distance = 0.55
-
-    # create graph
-    G = nx.Graph()
-    # ajouter des noeuds
-    G.add_nodes_from(nbNode)
-
-    G_copy = copy.deepcopy(G)
-
-    # pour chaque sommet
-    for v in nbNode:
-        # on doir lui donner une position(x,y) quon doit généré avec les trouve de AG
-        # et a chaque foit faut vérifeir si le noeud généré est connecter au graph
-        pass
-
-    print("nx.is_connected(G) : ", nx.is_connected(G))
-
-
-# random_geometric_graph_networkx_Tests()
-# random_geometric_graph_networkx_file()

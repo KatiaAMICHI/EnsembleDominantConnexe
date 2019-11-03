@@ -8,84 +8,39 @@ from math import sqrt
 
 
 def main1():
-    fileT = '.csv'
+    file = "../result/ResultDBs.csv"
 
-    data = pd.read_csv(fileT)
+    data = pd.read_csv(file)
 
-    dataTimes = {"JavaBD": (data['BBR19'][0], data['LS'][0], data['LSsort'][0], data['DC'][0]),
-                 "JavaBD_var": (
-                     data['varNbGMTBBR19'][0] * sqrt(1000),
-                     0.0,
-                     data['varNbGMTLSsort'][0] * sqrt(1000),
-                     data['varNbGMTDC'][0] * sqrt(1000)),
-                 "NetworkxDB": (data['BBR19'][1], data['LS'][1], data['LSsort'][1], data['DC'][1]),
-                 "NetworkxDB_var": (
-                     data['varNbGMTBBR19'][1] * sqrt(1000),
-                     0.0,
-                     data['varNbGMTLSsort'][1] * sqrt(1000),
-                     data['varNbGMTDC'][1] * sqrt(1000)),
-                 "GABD": (data['BBR19'][3], data['LS'][3], data['LSsort'][3], data['DC'][3]),
-                 "GABD_var": (
-                     data['varNbGMTBBR19'][3] * sqrt(1000),
-                     0.0,
-                     data['varNbGMTLSsort'][3] * sqrt(1000),
-                     data['varNbGMTDC'][3] * sqrt(1000))}
+    dataResultTime = {"JavaDB": (data['TalgoLi&'][0], data['TalgoA'][0]),
+                      "JavaDB_var": (
+                          0.0,
+                          0.0),
+                      "NetworkxDB": (data['TalgoLi&'][1], data['TalgoA'][1]),
+                      "NetworkxDB_var": (
+                          0.0,
+                          0.0),
+                      "GADB": (data['TalgoLi&'][1], data['TalgoA'][1]),
+                      "GADB_var": (
+                          0.0,
+                          0.0)}
 
-    dataNbGM = {"Enron": (data['BBR19'][0], data['LS'][0], data['LSsort'][0], data['DC'][0]),
-                "Enron_var": (
-                    data['varNbGMBBR19'][0] * sqrt(1000),
-                    0.0,
-                    data['varNbGMLSsort'][0] * sqrt(1000),
-                    data['varNbGMDC'][0] * sqrt(1000)),
-                "Rollernet": (data['BBR19'][1], data['LS'][1], data['LSsort'][1], data['DC'][1]),
-                "Rollernet_var": (
-                    data['varNbGMBBR19'][1] * sqrt(1000),
-                    0.0,
-                    data['varNbGMLSsort'][1] * sqrt(1000),
-                    data['varNbGMDC'][1] * sqrt(1000)),
-
-                "B1": (data['BBR19'][2], data['LS'][2], data['LSsort'][2], data['DC'][2]),
-                "B1_var": (
-                    data['varNbGMBBR19'][2] * sqrt(1000),
-                    0.0,
-                    data['varNbGMLSsort'][2] * sqrt(1000),
-                    data['varNbGMDC'][2] * sqrt(1000)),
-
-                "B2": (data['BBR19'][3], data['LS'][3], data['LSsort'][3], data['DC'][3]),
-                "B2_var": (
-                    data['varNbGMBBR19'][3] * sqrt(1000),
-                    0.0,
-                    data['varNbGMLSsort'][3] * sqrt(1000),
-                    data['varNbGMDC'][3] * sqrt(1000))}
-
-    dataCoverRate = {"Enron": (
-        data['BBR19'][0] * gamma * 2 * 100 / data['V_living'][0],
-        data['LS'][0] * gamma * 2 * 100 / data['V_living'][0],
-        data['LSsort'][0] * gamma * 2 * 100 / data['V_living'][0],
-        data['DC'][0] * gamma * 2 * 100 / data['V_living'][0]),
-        "Enron_var": (0.0, 0.0, 0.0, 0.0),
-
-        "Rollernet": (data['BBR19'][1] * gamma * 2 * 100 / data['V_living'][1],
-                      data['LS'][1] * gamma * 2 * 100 / data['V_living'][1],
-                      data['LSsort'][1] * gamma * 2 * 100 / data['V_living'][1],
-                      data['DC'][1] * gamma * 2 * 100 / data['V_living'][1]),
-        "Rollernet_var": (0.0, 0.0, 0.0, 0.0),
-
-        "B1": (data['BBR19'][2] * gamma * 2 * 100 / data['V_living'][2],
-               data['LS'][2] * gamma * 2 * 100 / data['V_living'][2],
-               data['LSsort'][2] * gamma * 2 * 100 / data['V_living'][2],
-               data['DC'][2] * gamma * 2 * 100 / data['V_living'][2]),
-        "B1_var": (0.0, 0.0, 0.0, 0.0),
-
-        "B2": (data['BBR19'][3] * gamma * 2 * 100 / data['V_living'][3],
-               data['LS'][3] * gamma * 2 * 100 / data['V_living'][3],
-               data['LSsort'][3] * gamma * 2 * 100 / data['V_living'][3],
-               data['DC'][3] * gamma * 2 * 100 / data['V_living'][3]),
-        "B2_var": (0.0, 0.0, 0.0, 0.0)
-    }
+    dataResultSize = {"JavaDB": (data['NBalgoLi&'][0], data['NBalgoA'][0]),
+                      "JavaDB_var": (
+                          0.0,
+                          0.0),
+                      "NetworkxDB": (data['NBalgoLi&'][1], data['NBalgoA'][1]),
+                      "NetworkxDB_var": (
+                          0.0,
+                          0.0),
+                      "GADB": (data['NBalgoLi&'][1], data['NBalgoA'][1]),
+                      "GADB_var": (
+                          0.0,
+                          0.0)}
 
     # 1 plot results Times
-    plot1_2Results("Result Time Execution  γ = " + str(gamma), "Times (s)", dataTimes, var=False, path='Discussion/')
+    plot1_2Results("Result Time Execution CDS problem", "Times (s)", dataResultTime, var=False, path='Discussion/')
+    plot1_2Results("Result size of CDS ", "size(CDS)", dataResultSize, var=False, path='Discussion/')
 
 
 def plot1_2Results(title, ylabel, data, var=True, path='', percentage=False):
@@ -97,47 +52,43 @@ def plot1_2Results(title, ylabel, data, var=True, path='', percentage=False):
     fig, ax = plt.subplots()
 
     index = np.arange(n_groups)
-    bar_width = 0.15
+    bar_width = 0.10
 
     opacity = 0.3
     error_config = {'ecolor': '0.3'}
 
-    print(data["Rollernet_var"])
-    if not var:
-        data["Enron_var"] = 0
-        data["Rollernet_var"] = 0
-        data["B1_var"] = 0
-        data["B2_var"] = 0
-
-    rects1 = plt.bar(index - bar_width, data["JavaBD"], bar_width,
+    rects1 = plt.bar(index - bar_width, data["JavaDB"], bar_width,
                      alpha=opacity,
                      color='b',
-                     yerr=data["JavaBD_var"],
+                     yerr=data["JavaDB_var"],
                      error_kw=error_config,
-                     label='JavaBD')
+                     label='JavaDB')
 
-    rects2 = plt.bar(index, data["NetworkxBD"], bar_width,
+    rects2 = plt.bar(index, data["NetworkxDB"], bar_width,
                      alpha=opacity,
                      color='r',
-                     yerr=data["NetworkxBD_var"],
+                     yerr=data["NetworkxDB_var"],
                      error_kw=error_config,
-                     label='ExtractRollernet')
+                     label='NetworkxDB')
 
-    rects3 = plt.bar(index + bar_width, data["GABD"], bar_width,
+    rects3 = plt.bar(index + bar_width, data["GADB"], bar_width,
                      alpha=opacity,
                      color='g',
-                     yerr=data["GABD_var"],
+                     yerr=data["GADB_var"],
                      error_kw=error_config,
-                     label='GABD')
+                     label='GADB')
 
     plt.xlabel('Algorithms')
     plt.ylabel(ylabel)
     plt.title(title)
-    plt.xticks(index + bar_width / 2, ('S-MIS', 'S-MISopti', 'algoK'))
+    plt.xticks(index + bar_width / 2, ('S-MIS', 'algoK'))
     plt.legend()
 
     plt.tight_layout()
 
-    plt.savefig('../png/' + path + title + '.png')
+    # plt.savefig('../png/' + path + title + '.png')
 
     plt.show()
+
+
+main1()
