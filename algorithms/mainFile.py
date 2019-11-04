@@ -1,11 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-#
 
-import csv
+import os
 import sys
 import time
-
-import os
 
 dir_path = os.path.dirname(os.path.realpath(__file__)).replace("algorithms", "")
 sys.path.append(dir_path)
@@ -15,37 +13,31 @@ from algorithms.GraphMethod import *
 from algorithms.GraphMethod import getEdges
 from algorithms.MCDS import *
 
-pathFile = str(sys.argv[1])
+filename = str(sys.argv[1])
 
 
 def main():
     nb_file = 1
 
-    DataSet = "Networkxa"
-    isFloat = False
-
-    if DataSet == "Networkx":
-        isFloat = True
-    i = 0
-    path = '../'
-    filename = 'input3.points'
-
-    filename = 'input2.points'
-    filename = 'input.points'
-    filename = 'input3.points'
-    filename = 'input4.points'
-    filename = 'generatGraph/tests0.txt'
-    filename = 'res/extractRollernet/extractRollernet9200.points'
-
-    i += 1
-    geo = False
+    geo = True  # true si le graph est géomitrique, false sinon
     if geo:
-        edges, edgesDist, matrixAdj = getEdges(path + filename, isFloat=isFloat)
-    else:
-        matrixAdj = getMatrixAdjFile(path + filename, isFloat=isFloat)
-        edges = getEdgesFile(path + filename, isFloat=isFloat)
+        firstLineIgnore = False  # doit etre mis a True pour les fichier de test de GADB
+        if firstLineIgnore:
+            f = open(filename, 'r')
+            vertices = f.read().splitlines()
+            d = vertices[0].split(' ')[1]
+            print("d : ", d)
+        elif "Java" in filename:
+            d = 70
+        else:
+            d = 70
 
-    vertices = getVerticesG(path + filename, geo=geo, isFloat=isFloat)
+        edges, edgesDist, matrixAdj = getEdges(filename, int(d), firstLineIgnore=firstLineIgnore)
+    else:
+        matrixAdj = getMatrixAdjFile(filename)
+        edges = getEdgesFile(filename)
+
+    vertices = getVerticesG(filename, geo=geo)
     print(" vertices : ", len(vertices))
     print(" edges : ", len(edges))
 
@@ -57,7 +49,6 @@ def main():
     talgoLi = tmps2 - tmps1
     cdsLi = list(noir) + list(bleu)
     print("cdsLi len : ", len(cdsLi))
-    # MISinFile(list(noir) + list(bleu), vertices)
     print(" --------------- FIN algo Article  avec ", filename, " --------------- ")
     print()
     print()
@@ -75,7 +66,7 @@ def main():
 
     print({'File': filename.replace(".points", ""),
            "V": round(len(vertices) / nb_file, 4),
-           "T": round(len(edges) / nb_file, 4),
+           "E": round(len(edges) / nb_file, 4),
            "TalgoLi&": round(talgoLi / nb_file, 4),
            "TalgoA": round(talgoA / nb_file, 4),
            "TalgoX": round(0 / nb_file, 4),
@@ -83,4 +74,5 @@ def main():
            "NBalgoA": round(len(cdsA) / nb_file, 4),
            "NBalgoX": round(0 / nb_file, 4)})
 
-# main()
+
+main()

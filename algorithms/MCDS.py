@@ -1,71 +1,50 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import copy
-import operator
 from collections import deque
 import networkx as nx
+import operator
+import copy
 
 
 def MCDS(G):
-    # print("nx.is_connected(G) : ", nx.is_connected(G))
+    """
+    algorithm qui permet de trouver un ensemble dominant connexe.
+    :param G: graphe en entrée
+    :return: NMDS de G
+    """
     if not nx.is_connected(G):
         return -1
 
     G2 = copy.deepcopy(G)
+    n = max(dict(G2.degree()).items(), key=operator.itemgetter(1))[0]
+    mcds = {n}
 
-    # prend le nœud avec le degré maximum comme nœud de départ
-    init_node = max(dict(G2.degree()).items(), key=operator.itemgetter(1))[0]
-    # print("starting_node  : ", init_node)
+    neighbNsort = list(map(lambda x: x[0],
+                                     sorted(dict(G2.degree(G2.neighbors(n))).items(),
+                                            key=operator.itemgetter(1),
+                                            reverse=True)
+                                     )
+                                 )
+    Q = deque(neighbNsort)
+    insertedNode = set(list(neighbNsort) + [n])
 
-    mcds = {init_node}
+    while Q:
+        u = Q.pop()
+        G_copy = copy.deepcopy(G2)
+        G_copy.remove_node(u)
 
-    # Mettre en file d'attente les noeuds voisins du noeud de départ sur Q dans l'ordre décroissant de leur degré
-    neighbor_nodes = G2.neighbors(init_node)
-
-    a = dict(G2.degree(neighbor_nodes))
-
-    neighbor_nodes_sorted = list(map(lambda x: x[0], sorted(a.items(), key=operator.itemgetter(1), reverse=True)))
-
-    # une file de priorités est gérée de manière centralisée pour décider si un élément ferait partie de MCDS.
-    priority_queue = deque(neighbor_nodes_sorted)
-    # print("priority_queue : ", priority_queue)
-    inserted_set = set(list(neighbor_nodes_sorted) + [init_node])
-
-    i = 0
-    while priority_queue:
-        # print(" ...............................................................................", i)
-        i += 1
-        # print("* CDS: ", mcds)
-        u = priority_queue.pop()
-        # print("u  : ", u)
-
-        # vérifie si le graphique après la suppression de u est toujours connecté
-        rest_graph = copy.deepcopy(G2)
-        rest_graph.remove_node(u)
-
-        if nx.is_connected(rest_graph):
-            # print(" >>> supp de : ", u)
+        if nx.is_connected(G_copy):
             G2.remove_node(u)
-
-        else:  # si le graph n'est pas connecté
-            # print(" <<< ajout de : ", u)
+        else:
             mcds.add(u)
+            insertNeighbNort = sorted(dict(G2.degree(set(G2.neighbors(u)) - insertedNode)).items(),
+                                      key=operator.itemgetter(1),
+                                      reverse=True)
 
-            # ajoute les voisins de u à la file d'attente prioritaire, qui ne sont jamais insérés dans Q
-            inserted_neighbors = set(G2.neighbors(u)) - inserted_set
-
-            inserted_neighbors_sorted = sorted(dict(G2.degree(inserted_neighbors)).items(),
-                                               key=operator.itemgetter(1),
-                                               reverse=True)
-
-            inserted_neighbors_sorted = list(map(lambda x: x[0], inserted_neighbors_sorted))
-            # print("     1 priority_queue : ", priority_queue)
-            priority_queue.extend(inserted_neighbors_sorted)
-            # print("     2 priority_queue : ", priority_queue)
-            # print("     1 inserted_set : ", inserted_set)
-            inserted_set.update(inserted_neighbors_sorted)
-            # print("     2 inserted_set : ", inserted_set)
+            insertNeighbNort = list(map(lambda x: x[0], insertNeighbNort))
+            Q.extend(insertNeighbNort)
+            insertedNode.update(insertNeighbNort)
 
     if not nx.is_dominating_set(G, mcds) and not nx.is_connected(G.subgraph(mcds)):
         return -1

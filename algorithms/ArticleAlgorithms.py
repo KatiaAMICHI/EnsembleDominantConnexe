@@ -1,11 +1,27 @@
-from functools import reduce
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 from operator import itemgetter
+from functools import reduce
 from operator import or_
 
 dictComposion = {}
 
+"""
+Dans ce fichier, on a implémenté les différents algorithmes de l'article, et les méthodes vérifiant les lemmas 
+"""
+
 
 def hasNNeibBlack(matrixAdj, noir, v):
+    """
+    Lemma 2
+
+    :param matrixAdj: la matrice d'adjacence
+    :param noir: la liste des noeuds noir
+    :param v: un noeud
+    :return: true si v a un noeud noir dans les voisins des ses voisins
+    """
+
     if len(noir) == 0:
         return True
     if matrixAdj[v]["color"] == "gris":
@@ -22,6 +38,13 @@ def hasNNeibBlack(matrixAdj, noir, v):
 
 
 def getDegreeWh(matrixAdj, v):
+    """
+
+
+    :param matrixAdj:
+    :param v:
+    :return:
+    """
     return len(list(filter(lambda x: matrixAdj[x]["color"] == "blanc", matrixAdj[v]['voisins'])))
 
 

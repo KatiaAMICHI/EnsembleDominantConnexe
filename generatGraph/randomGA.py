@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import math
 import random
 from collections import defaultdict
@@ -146,7 +149,7 @@ def randomGeoGraphGA():
 
             print(">>> nx.is_connected(G) : ", nx.is_connected(G))
 
-            dataToFile("../res/GenGA/tests" + str(i) + "_" + str(nbNode) + ".point", pos.values(), nbNode, d)
+            dataToFile("../res/GADB/tests" + str(i) + "_" + str(nbNode) + ".point", pos.values(), nbNode, d)
 
 
 randomGeoGraphGA()

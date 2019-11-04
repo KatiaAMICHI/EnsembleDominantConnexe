@@ -1,5 +1,5 @@
-import copy
-import random
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 
 import matplotlib.pyplot as plt
 import networkx as nx
@@ -40,7 +40,7 @@ def random_geometric_graph_networkxDS():
             pos = nx.get_node_attributes(G, 'pos')
             print(">>> nx.is_connected(G) : ", nx.is_connected(G))
 
-            dataToFile("../res/GenNetworkx/tests" + str(i) + "_" + str(e * 10) + ".point", pos.values(), e * 10, d)
+            dataToFile("../res/NetworkxDB/tests" + str(i) + "_" + str(e * 10) + ".point", pos.values(), e * 10, d)
 
 
 def random_geometric_graph_networkx_file():

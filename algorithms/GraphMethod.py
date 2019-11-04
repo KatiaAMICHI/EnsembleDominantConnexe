@@ -1,5 +1,19 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import os
 from collections import defaultdict
+import networkx as nx
+
+"""
+Fichier qui contient les différents méthode caractérisant un graph
+    * les sommets
+    * les arretes
+    * la matrice d'adjacence
+    * le noeud de degré maximum
+    * isCDS
+    * écriture/lecture de fichier
+"""
 
 
 def getVertices(filename, isFloat=False, firstLineIgnore=False):
@@ -8,25 +22,30 @@ def getVertices(filename, isFloat=False, firstLineIgnore=False):
     :param filename:
     :return:
     """
+
     f = open(filename, 'r')
     vertices = f.read().splitlines()
-    del vertices[0]
+
+    if firstLineIgnore:
+        del vertices[0]
 
     if isFloat:
         res = list(map(lambda x: (float(x.split(' ')[0]), float(x.split(' ')[1])), vertices))
     else:
         res = list(map(lambda x: (int(x.split(' ')[0]), int(x.split(' ')[1])), vertices))
-    # un id pour chaque noeud { id : Point(x,y) ....}
     verticesIdP = dict(enumerate(res, 0))
 
     return verticesIdP
 
 
 def getVerticesFile(file, isFloat=False, firstLineIgnore=False):
+    # si le séparateur entre les arrete est '\t'
     # cmd = "tr '\t' '\n' < " + file + " | sort | uniq"
+    # sinon
     cmd = "tr ' ' '\n' < " + file + " | sort | uniq"
     vertices = os.popen(cmd).read().split('\n')
     del vertices[-1]
+
     if isFloat:
         vertices = list(map(float, vertices))
     else:
@@ -38,12 +57,13 @@ def getVerticesFile(file, isFloat=False, firstLineIgnore=False):
 def getEdgesFile(file, isFloat, firstLineIgnore=False):
     with open(file, 'r') as f:
         reader = f.read().splitlines()
-        # edges = list(map(lambda x: (int(x.split('\t')[0]), int(x.split('\t')[1])), reader))
         if isFloat:
             edges = list(map(lambda x: (float(x.split(' ')[0]), float(x.split(' ')[1])), reader))
         else:
+            # si le séparateur entre les arrete est '\t'
+            # edges = list(map(lambda x: (int(x.split('\t')[0]), int(x.split('\t')[1])), reader))
+            # sinon
             edges = list(map(lambda x: (int(x.split(' ')[0]), int(x.split(' ')[1])), reader))
-    print("[getEdgesFile] edges : ", len(edges))
     return edges
 
 
@@ -135,14 +155,8 @@ def neighborP(p, vertices):
     return result
 
 
-def isMIS(matrixAdj, MIS):
-    vertices = list(matrixAdj.keys())
-    cpt = 0
-    for p in MIS:
-        vertices.remove(p)
-        vertices = set(vertices) - set(matrixAdj[p]["voisins"])
-        cpt += len(matrixAdj[p]["voisins"])
-    return len(vertices) == 0
+def isCDS(G, mcds):
+    return nx.is_dominating_set(G, mcds) and nx.is_connected(G.subgraph(mcds))
 
 
 def MISinFile(noir, verticesIdP):
